@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIDE & GROOM | Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <script>
+        const W = {
+            coupleNames: "BRIDE  & GROOM ",
+            groomName: "GROOM ",
+            brideName: "BRIDE ",
+            weddingDate: "2026-05-02",
+            weddingTime: "17:00:00",
+            timezone: "+05:30",
+            displayDay: "Saturday",
+            displayDate: "02",
+            displayMonth: "May",
+            displayYear: "2026",
+            displayTime: "At 5 PM",
+            venueName: "Kottayam Grand Hotel & Convention Centre",
+            venueAddress: "Nerekadavu Road, Arpookara, Kottayam",
+            venueSchedule: "Reception at 5:00 PM onwards",
+            mapsLink: "https://maps.google.com/?q=Kottayam+Grand+Hotel+Convention+Centre",
+            mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.6!2d76.5563!3d9.5732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062ba7a909741b%3A0xe5b2538a81831218!2sKottayam%20Grand%20Hotel%20%26%20Convention%20Centre!5e0!3m2!1sen!2sin!4v1680000000000",
+            inviteTagline: "You are cordially invited to the wedding reception of",
+            inviteBlurb: "With love in our hearts, we invite you to celebrate our union.",
+            storyText: "Our story began back in the halls of our college, where a simple meeting sparked a beautiful connection. From those early days of navigating campus life together, we discovered a love that has only grown stronger with time. Through all the shared laughter, milestones, and unforgettable memories over the years, we have remained each other's constant support. Now, as we step into this beautiful next chapter, we are absolutely thrilled to celebrate the beginning of our forever!",
+            storyPhoto: "",
+            storyCaption: "Baghya & Johnson",
+            gallery: [
+                { img: "", label: "A love story begins", color: "linear-gradient(135deg,#6b1f3a,#2c0d1a)" },
+                { img: "", label: "Together always", color: "linear-gradient(135deg,#8b2252,#3d0f28)" },
+                { img: "", label: "Our favourite memory", color: "linear-gradient(135deg,#7a1a40,#1e0810)" },
+                { img: "", label: "Endless laughter", color: "linear-gradient(135deg,#5c1030,#2a0a18)" },
+                { img: "", label: "Forever moments", color: "linear-gradient(135deg,#9c2b5e,#4a1030)" },
+                { img: "", label: "The beginning of us", color: "linear-gradient(135deg,#6b1f3a,#3a0f20)" },
+            ],
+            program: [
+                { time: "4:30 PM", event: "Guest Arrival", desc: "Welcome drinks & mingling" },
+                { time: "5:00 PM", event: "Reception Begins", desc: "The celebration commences" },
+                { time: "5:30 PM", event: "Grand Entry", desc: "Baghya & Johnson arrive" },
+                { time: "6:00 PM", event: "Dinner & Festivities", desc: "Lavish dinner with music" },
+                { time: "8:00 PM", event: "Farewell & Blessings", desc: "An evening to remember" },
+            ],
+        };
+    </script>
+
+    <style>
+        :root {
+            --bg: #0e0408;
+            --surface: #1a0810;
+            --rose: #c4425a;
+            --rose-dark: #8b1a32;
+            --rose-light: #e8849a;
+            --gold: #c9944a;
+            --gold-light: #e8c080;
+            --cream: #f5ede8;
+            --muted: #8a6070;
+            --text: #f0dce4;
+            --serif: 'Cinzel', serif;
+            --display: 'Cinzel Decorative', serif;
+            --body: 'EB Garamond', serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--body);
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ── FALLING PETALS ── */
+        .petal {
+            position: fixed;
+            top: -40px;
+            width: 12px;
+            height: 16px;
+            background: var(--rose);
+            border-radius: 50% 0 50% 0;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                opacity: 0.7;
+                transform: translateX(0) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(80px) translateY(110vh) rotate(360deg);
+            }
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 300;
+            background: rgba(14, 4, 8, 0.95);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 48px;
+            border-bottom: 0.5px solid rgba(196, 66, 90, 0.2);
+        }
+
+        .nav-logo {
+            font-family: var(--display);
+            font-size: 18px;
+            color: var(--gold-light);
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-family: var(--serif);
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            color: var(--muted);
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--rose-light);
+        }
+
+        /* ── HERO ── */
+        #hero {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 30% 50%, #2a0818 0%, #0e0408 70%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.8s ease;
+        }
+
+        #hero.gone {
+            opacity: 0;
+            max-height: 0;
+            min-height: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .hero-border {
+            position: absolute;
+            inset: 20px;
+            border: 0.5px solid rgba(196, 66, 90, 0.15);
+            pointer-events: none;
+        }
+
+        .hero-corner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: var(--gold);
+            border-style: solid;
+            border-width: 0;
+        }
+
+        .hero-corner.tl {
+            top: 20px;
+            left: 20px;
+            border-top-width: 1px;
+            border-left-width: 1px;
+        }
+
+        .hero-corner.tr {
+            top: 20px;
+            right: 20px;
+            border-top-width: 1px;
+            border-right-width: 1px;
+        }
+
+        .hero-corner.bl {
+            bottom: 20px;
+            left: 20px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+
+        .hero-corner.br {
+            bottom: 20px;
+            right: 20px;
+            border-bottom-width: 1px;
+            border-right-width: 1px;
+        }
+
+        .hero-rose-icon {
+            font-size: 32px;
+            margin-bottom: 24px;
+            animation: fadeUp 1s ease 0.2s both;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--serif);
+            font-size: 9px;
+            letter-spacing: 0.35em;
+            color: var(--rose-light);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .hero-names {
+            font-family: var(--display);
+            font-size: 52px;
+            color: var(--cream);
+            line-height: 1.1;
+            text-align: center;
+            margin-bottom: 16px;
+            animation: fadeUp 1s ease 0.4s both;
+        }
+
+        .hero-names span {
+            color: var(--gold-light);
+        }
+
+        .hero-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            animation: fadeUp 1s ease 0.5s both;
+        }
+
+        .hero-divider-line {
+            width: 60px;
+            height: 0.5px;
+            background: var(--rose);
+        }
+
+        .hero-divider-icon {
+            color: var(--rose);
+            font-size: 14px;
+        }
+
+        .hero-sub {
+            font-family: var(--serif);
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            text-transform: uppercase;
+            animation: fadeUp 1s ease 0.6s both;
+        }
+
+        .hero-hint {
+            margin-top: 40px;
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.22em;
+            color: rgba(196, 66, 90, 0.5);
+            text-transform: uppercase;
+            animation: fadeUp 1s ease 0.8s both, breathe 2.5s ease-in-out 1.5s infinite;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* ═══════════════════════════════════════
+   ENVELOPE SECTION
+═══════════════════════════════════════ */
+        #envSection {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(ellipse at center, #1e0c16 0%, #0a0306 100%);
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #envSection.show {
+            display: flex;
+        }
+
+        /* ambient glow */
+        #envSection::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(196, 66, 90, 0.07) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .env-section-eyebrow {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.38em;
+            color: rgba(196, 66, 90, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .env-section-title {
+            font-family: var(--display);
+            font-size: 28px;
+            color: var(--cream);
+            margin-bottom: 8px;
+            animation: fadeUp 0.7s ease 0.1s both;
+        }
+
+        .env-section-sub {
+            font-family: var(--body);
+            font-size: 13px;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 48px;
+            animation: fadeUp 0.7s ease 0.15s both;
+        }
+
+        /* ── ENVELOPE WRAPPER ── */
+        .envelope-scene {
+            position: relative;
+            width: 480px;
+            max-width: 92vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            animation: fadeUp 0.8s ease 0.2s both;
+        }
+
+        /* ── ENVELOPE BODY ── */
+        .envelope-shell {
+            position: relative;
+            width: 480px;
+            max-width: 92vw;
+            height: 300px;
+            filter: drop-shadow(0 20px 60px rgba(139, 26, 50, 0.5));
+            transition: filter 0.4s;
+        }
+
+        .envelope-scene:hover .envelope-shell {
+            filter: drop-shadow(0 24px 80px rgba(196, 66, 90, 0.55));
+        }
+
+        /* back face */
+        .env-back {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, #2a1020 0%, #1a0814 100%);
+            border: 0.5px solid rgba(196, 66, 90, 0.25);
+            border-radius: 3px;
+        }
+
+        /* left & right side flaps */
+        .env-side-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 150px 0 0 240px;
+            border-color: transparent transparent transparent #1e0a16;
+        }
+
+        .env-side-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 150px 240px 0 0;
+            border-color: transparent #1e0a16 transparent transparent;
+        }
+
+        /* bottom flap */
+        .env-bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 148px 240px;
+            border-color: transparent transparent #160810 transparent;
+        }
+
+        .env-bottom-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 240px 148px 0;
+            border-color: transparent transparent #160810 transparent;
+        }
+
+        /* ── TOP FLAP ── */
+        .env-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 180px 240px 0 240px;
+            border-color: #281018 transparent transparent transparent;
+            transform-origin: top center;
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 20;
+        }
+
+        .env-flap.open {
+            transform: rotateX(180deg);
+        }
+
+        /* flap inner triangle decorative line */
+        .env-flap-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 170px 232px 0 232px;
+            border-color: rgba(196, 66, 90, 0.12) transparent transparent transparent;
+            z-index: 21;
+            transform-origin: top center;
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .env-flap-line.open {
+            transform: rotateX(180deg);
+        }
+
+        /* WAX SEAL on flap */
+        .wax-seal {
+            position: absolute;
+            left: 50%;
+            top: 140px;
+            /* sits at the flap crease */
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #d04060, #7a1528);
+            border: 1.5px solid rgba(232, 132, 154, 0.4);
+            box-shadow: 0 4px 18px rgba(139, 26, 50, 0.7), inset 0 1px 2px rgba(255, 200, 220, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 30;
+            transition: transform 0.4s, opacity 0.5s;
+        }
+
+        .wax-seal svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--gold-light);
+            opacity: 0.9;
+        }
+
+        .wax-seal.broken {
+            opacity: 0;
+            transform: translateX(-50%) scale(0.4) rotate(30deg);
+        }
+
+        /* ── INVITATION CARD slot ── */
+        .card-slot {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            right: 16px;
+            bottom: 4px;
+            z-index: 5;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        /* ── INVITATION CARD ── */
+        .inv-card {
+            width: 100%;
+            background: linear-gradient(160deg, #201018, #2e1626);
+            border: 0.5px solid rgba(196, 66, 90, 0.3);
+            padding: 28px 26px 24px;
+            text-align: center;
+            position: relative;
+            transform: translateY(300px);
+            transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s;
+            flex-shrink: 0;
+        }
+
+        .inv-card.risen {
+            transform: translateY(0);
+        }
+
+        /* card inner border */
+        .inv-card::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 0.5px solid rgba(201, 148, 74, 0.18);
+            pointer-events: none;
+        }
+
+        /* card corner accents */
+        .cc {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-color: var(--gold);
+            border-style: solid;
+            border-width: 0;
+            opacity: 0.45;
+        }
+
+        .cc.tl {
+            top: 12px;
+            left: 12px;
+            border-top-width: 1px;
+            border-left-width: 1px;
+        }
+
+        .cc.tr {
+            top: 12px;
+            right: 12px;
+            border-top-width: 1px;
+            border-right-width: 1px;
+        }
+
+        .cc.bl {
+            bottom: 12px;
+            left: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+
+        .cc.br {
+            bottom: 12px;
+            right: 12px;
+            border-bottom-width: 1px;
+            border-right-width: 1px;
+        }
+
+        /* card content */
+        .ic-rose-icon {
+            font-size: 22px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .ic-tagline {
+            font-family: var(--serif);
+            font-size: 7.5px;
+            letter-spacing: 0.22em;
+            color: var(--rose-light);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .ic-couple {
+            font-family: var(--display);
+            font-size: 28px;
+            color: var(--cream);
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .ic-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .ic-divider-line {
+            flex: 1;
+            max-width: 50px;
+            height: 0.5px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        .ic-divider-icon {
+            color: var(--gold);
+            font-size: 10px;
+        }
+
+        .ic-date-month {
+            font-family: var(--serif);
+            font-size: 7px;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .ic-date-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .ic-date-side {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            text-transform: uppercase;
+        }
+
+        .ic-date-num {
+            font-family: var(--display);
+            font-size: 32px;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .ic-date-sep {
+            color: var(--rose);
+            font-size: 11px;
+        }
+
+        .ic-date-year {
+            font-family: var(--serif);
+            font-size: 8px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+
+        .ic-blurb {
+            font-family: var(--body);
+            font-size: 12px;
+            color: rgba(240, 220, 228, 0.6);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .ic-venue-rule {
+            width: 100%;
+            height: 0.5px;
+            background: rgba(196, 66, 90, 0.15);
+            margin-bottom: 10px;
+        }
+
+        .ic-venue-label {
+            font-family: var(--serif);
+            font-size: 6.5px;
+            letter-spacing: 0.25em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .ic-venue-name {
+            font-family: var(--serif);
+            font-size: 9px;
+            letter-spacing: 0.07em;
+            color: var(--cream);
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+
+        /* ── ENVELOPE HINT ── */
+        .env-tap-hint {
+            margin-top: 20px;
+            font-family: var(--serif);
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            color: rgba(196, 66, 90, 0.45);
+            text-transform: uppercase;
+            animation: breathe 2.5s ease-in-out infinite;
+            transition: opacity 0.4s;
+        }
+
+        .env-tap-hint.gone {
+            opacity: 0;
+            animation: none;
+            pointer-events: none;
+        }
+
+        .env-scroll-hint {
+            margin-top: 14px;
+            font-family: var(--serif);
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            color: rgba(196, 66, 90, 0.4);
+            text-transform: uppercase;
+            animation: breathe 2.5s ease-in-out 0.5s infinite;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.6s 1.2s;
+        }
+
+        .env-scroll-hint.show {
+            opacity: 1;
+        }
+
+        /* ── COUNTDOWN ── */
+        #countdown {
+            background: linear-gradient(135deg, #1e0810 0%, #0e0408 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 0.5px solid rgba(196, 66, 90, 0.15);
+            border-bottom: 0.5px solid rgba(196, 66, 90, 0.15);
+        }
+
+        .cd-label {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.3em;
+            color: var(--rose-light);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cd-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .cd-box {
+            background: rgba(196, 66, 90, 0.06);
+            border: 0.5px solid rgba(196, 66, 90, 0.2);
+            width: 88px;
+            padding: 16px 6px 12px;
+            text-align: center;
+        }
+
+        .cd-num {
+            font-family: var(--display);
+            font-size: 40px;
+            color: var(--cream);
+            line-height: 1;
+            transition: transform 0.15s;
+        }
+
+        .cd-num.tick {
+            transform: scale(1.1);
+        }
+
+        .cd-unit {
+            font-family: var(--serif);
+            font-size: 7px;
+            letter-spacing: 0.25em;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .cd-sep {
+            color: var(--rose);
+            font-size: 20px;
+            margin-top: -8px;
+        }
+
+        /* ── STORY ── */
+        #story {
+            background: var(--surface);
+            padding: 90px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+
+        #story::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            bottom: 10%;
+            width: 0.5px;
+            background: rgba(196, 66, 90, 0.1);
+        }
+
+        .story-img-side {
+            display: flex;
+            justify-content: center;
+        }
+
+        .rose-frame {
+            position: relative;
+            width: 280px;
+        }
+
+        .rose-frame-inner {
+            background: linear-gradient(135deg, #2a1020, #1a0810);
+            border: 0.5px solid rgba(196, 66, 90, 0.3);
+            padding: 12px;
+            position: relative;
+        }
+
+        .rose-frame-inner::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 0.5px solid rgba(201, 148, 74, 0.15);
+        }
+
+        .rose-photo {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .rose-placeholder {
+            width: 100%;
+            height: 290px;
+            background: linear-gradient(135deg, #2a0818, #1a0410);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rose-placeholder span {
+            font-family: var(--body);
+            font-style: italic;
+            font-size: 13px;
+            color: rgba(196, 66, 90, 0.4);
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .rose-caption {
+            font-family: var(--display);
+            font-size: 12px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 12px;
+            letter-spacing: 0.08em;
+        }
+
+        .rose-tag {
+            position: absolute;
+            bottom: -18px;
+            right: -18px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--rose-dark);
+            border: 2px solid var(--rose);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 7px;
+            color: var(--cream);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .story-eyebrow {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.3em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .story-title {
+            font-family: var(--display);
+            font-size: 44px;
+            color: var(--cream);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .story-body {
+            font-family: var(--body);
+            font-size: 16px;
+            color: rgba(240, 220, 228, 0.75);
+            line-height: 1.95;
+        }
+
+        /* ── GALLERY ── */
+        #gallery {
+            background: var(--bg);
+            padding: 80px 0 88px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .g-eyebrow {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.3em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .g-title {
+            font-family: var(--display);
+            font-size: 42px;
+            color: var(--cream);
+        }
+
+        .g-sub {
+            font-family: var(--body);
+            font-size: 13px;
+            color: var(--muted);
+            font-style: italic;
+            margin-top: 6px;
+        }
+
+        .c-outer {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-item {
+            position: absolute;
+            top: 50%;
+            border-radius: 0;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border: 0.5px solid rgba(196, 66, 90, 0.2);
+        }
+
+        .c-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .c-label {
+            font-family: var(--body);
+            font-style: italic;
+            font-size: 12px;
+            color: rgba(240, 220, 228, 0.7);
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(14, 4, 8, 0.85));
+            z-index: 1;
+        }
+
+        .carr-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            height: 38px;
+            background: rgba(14, 4, 8, 0.8);
+            border: 0.5px solid rgba(196, 66, 90, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 50;
+            color: var(--rose-light);
+            font-size: 16px;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .carr-btn:hover {
+            background: var(--rose-dark);
+            border-color: var(--rose);
+        }
+
+        .carr-btn.left {
+            left: 16px;
+        }
+
+        .carr-btn.right {
+            right: 16px;
+        }
+
+        .g-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .g-dot-btn {
+            width: 8px;
+            height: 8px;
+            background: rgba(196, 66, 90, 0.25);
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s;
+            transform: rotate(45deg);
+        }
+
+        .g-dot-btn.on {
+            background: var(--rose);
+            transform: rotate(45deg) scale(1.3);
+        }
+
+        /* ── VENUE ── */
+        #venue {
+            background: var(--surface);
+            padding: 90px 64px;
+            position: relative;
+        }
+
+        .venue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .v-eyebrow {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.3em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .v-title {
+            font-family: var(--display);
+            font-size: 36px;
+            color: var(--cream);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .v-title span {
+            color: var(--gold-light);
+        }
+
+        .v-name {
+            font-family: var(--body);
+            font-size: 20px;
+            font-style: italic;
+            color: var(--rose-light);
+            margin-bottom: 28px;
+            line-height: 1.4;
+        }
+
+        .v-rule {
+            width: 48px;
+            height: 0.5px;
+            background: var(--rose);
+            margin-bottom: 28px;
+        }
+
+        .v-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 0.5px solid rgba(196, 66, 90, 0.12);
+        }
+
+        .v-detail:first-of-type {
+            border-top: 0.5px solid rgba(196, 66, 90, 0.12);
+        }
+
+        .v-icon {
+            width: 30px;
+            height: 30px;
+            border: 0.5px solid rgba(196, 66, 90, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .v-dlabel {
+            font-family: var(--serif);
+            font-size: 8px;
+            letter-spacing: 0.2em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .v-dtext {
+            font-family: var(--body);
+            font-size: 15px;
+            color: rgba(240, 220, 228, 0.7);
+        }
+
+        .v-btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .v-btn {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 13px 22px;
+            border: 0.5px solid rgba(196, 66, 90, 0.4);
+            background: transparent;
+            color: var(--rose-light);
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .v-btn:hover {
+            background: var(--rose-dark);
+            border-color: var(--rose);
+            color: var(--cream);
+        }
+
+        .mapbox {
+            border: 0.5px solid rgba(196, 66, 90, 0.2);
+            overflow: hidden;
+        }
+
+        .map-topbar {
+            background: #12060c;
+            padding: 10px 16px;
+            border-bottom: 0.5px solid rgba(196, 66, 90, 0.15);
+        }
+
+        .map-topbar a {
+            font-family: var(--serif);
+            font-size: 11px;
+            color: var(--rose-light);
+            text-decoration: none;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            display: block;
+            filter: grayscale(0.3) sepia(0.2);
+        }
+
+        /* ── PROGRAM ── */
+        #program {
+            background: radial-gradient(ellipse at top, #200a14 0%, #0e0408 60%);
+            padding: 90px 48px;
+        }
+
+        .prog-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .prog-eyebrow {
+            font-family: var(--serif);
+            font-size: 8.5px;
+            letter-spacing: 0.3em;
+            color: var(--rose);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .prog-title {
+            font-family: var(--display);
+            font-size: 44px;
+            color: var(--cream);
+            margin-bottom: 0;
+        }
+
+        .prog-title span {
+            color: var(--gold-light);
+        }
+
+        .prog-timeline {
+            max-width: 560px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .prog-timeline::before {
+            content: '';
+            position: absolute;
+            left: 88px;
+            top: 0;
+            bottom: 0;
+            width: 0.5px;
+            background: rgba(196, 66, 90, 0.2);
+        }
+
+        .prog-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            padding: 22px 0;
+            opacity: 0;
+            transform: translateX(-24px);
+            transition: all 0.6s ease;
+        }
+
+        .prog-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .prog-time {
+            font-family: var(--serif);
+            font-size: 9.5px;
+            letter-spacing: 0.1em;
+            color: var(--rose);
+            text-transform: uppercase;
+            min-width: 80px;
+            padding-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .prog-dot-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        .prog-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--rose);
+            transform: rotate(45deg);
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .prog-event {
+            font-family: var(--serif);
+            font-size: 14px;
+            color: var(--cream);
+            margin-bottom: 4px;
+            letter-spacing: 0.04em;
+        }
+
+        .prog-desc {
+            font-family: var(--body);
+            font-size: 13.5px;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #08030a;
+            padding: 28px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            border-top: 0.5px solid rgba(196, 66, 90, 0.12);
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-family: var(--body);
+            font-size: 12.5px;
+            color: rgba(196, 66, 90, 0.6);
+            font-style: italic;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .footer-brand a {
+            color: var(--rose-light);
+            text-decoration: none;
+            font-style: normal;
+            font-family: var(--serif);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            transition: color 0.2s;
+        }
+
+        .footer-brand a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-sep {
+            color: rgba(196, 66, 90, 0.3);
+        }
+
+        .footer-top {
+            font-family: var(--serif);
+            font-size: 9.5px;
+            letter-spacing: 0.14em;
+            color: rgba(196, 66, 90, 0.5);
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color 0.2s;
+        }
+
+        .footer-top:hover {
+            color: var(--rose-light);
+        }
+
+        @media(max-width:768px) {
+            nav {
+                padding: 13px 20px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 7.5px;
+            }
+
+            #story {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                padding: 60px 28px;
+            }
+
+            .venue-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #venue {
+                padding: 60px 28px;
+            }
+
+            #program {
+                padding: 60px 24px;
+            }
+
+            .hero-names {
+                font-size: 36px;
+            }
+
+            .envelope-shell {
+                height: 240px;
+            }
+
+            .env-flap {
+                border-width: 144px 46vw 0 46vw;
+            }
+
+            .env-flap-line {
+                border-width: 134px 44vw 0 44vw;
+            }
+
+            .env-side-left {
+                border-width: 120px 0 0 46vw;
+            }
+
+            .env-side-right {
+                border-width: 120px 46vw 0 0;
+            }
+
+            .env-bottom-left {
+                border-width: 0 0 118px 46vw;
+            }
+
+            .env-bottom-right {
+                border-width: 0 46vw 118px 0;
+            }
+
+            .wax-seal {
+                top: 112px;
+            }
+
+            .inv-card {
+                padding: 20px 16px;
+            }
+
+            .ic-couple {
+                font-size: 22px;
+            }
+
+            .ic-date-num {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PETALS -->
+    <div id="petals"></div>
+
+    <!-- NAV -->
+    <nav id="top">
+        <a class="nav-logo" id="navLogo" onclick="goTop()"></a>
+        <div class="nav-links">
+            <a onclick="goto('story')">Story</a>
+            <a onclick="goto('gallery')">Gallery</a>
+            <a onclick="gotoEnv()">Invite</a>
+            <a onclick="goto('venue')">Venue</a>
+            <a onclick="goto('program')">Program</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" onclick="goToEnv()">
+        <div class="hero-border"></div>
+        <div class="hero-corner tl"></div>
+        <div class="hero-corner tr"></div>
+        <div class="hero-corner bl"></div>
+        <div class="hero-corner br"></div>
+        <div class="hero-rose-icon">🌹</div>
+        <div class="hero-eyebrow">A Love Story</div>
+        <div class="hero-names" id="heroNames"></div>
+        <div class="hero-divider">
+            <div class="hero-divider-line"></div>
+            <div class="hero-divider-icon">♦</div>
+            <div class="hero-divider-line"></div>
+        </div>
+        <div class="hero-sub" id="heroSub"></div>
+        <div class="hero-hint">Click to reveal the invitation</div>
+    </section>
+
+    <!-- ═══════ ENVELOPE SECTION ═══════ -->
+    <section id="envSection">
+        <div class="env-section-eyebrow">Your Invitation Awaits</div>
+        <div class="env-section-title">Open the Envelope</div>
+        <div class="env-section-sub">Tap the wax seal to reveal your invitation</div>
+
+        <div class="envelope-scene" id="envelopeScene" onclick="openEnvelope()">
+
+            <div class="envelope-shell">
+
+                <!-- back plate -->
+                <div class="env-back"></div>
+
+                <!-- CARD SLOT — invitation slides up from inside -->
+                <div class="card-slot">
+                    <div class="inv-card" id="invCard">
+                        <div class="cc tl"></div>
+                        <div class="cc tr"></div>
+                        <div class="cc bl"></div>
+                        <div class="cc br"></div>
+
+                        <span class="ic-rose-icon">🌹</span>
+                        <div class="ic-tagline" id="icTagline"></div>
+                        <div class="ic-couple" id="icCouple"></div>
+                        <div class="ic-divider">
+                            <div class="ic-divider-line"></div>
+                            <div class="ic-divider-icon">♦</div>
+                            <div class="ic-divider-line"></div>
+                        </div>
+                        <div class="ic-date-month" id="icMonth"></div>
+                        <div class="ic-date-row">
+                            <div class="ic-date-side" id="icDay"></div>
+                            <span class="ic-date-sep">◆</span>
+                            <div class="ic-date-num" id="icDateNum"></div>
+                            <span class="ic-date-sep">◆</span>
+                            <div class="ic-date-side" id="icTime"></div>
+                        </div>
+                        <div class="ic-date-year" id="icYear"></div>
+                        <div class="ic-blurb" id="icBlurb"></div>
+                        <div class="ic-venue-rule"></div>
+                        <div class="ic-venue-label"></div>
+                        <div class="ic-venue-name" id="icVenue"></div>
+                    </div>
+                </div>
+
+                <!-- side flaps -->
+                <div class="env-side-left"></div>
+                <div class="env-side-right"></div>
+
+                <!-- bottom flaps -->
+                <div class="env-bottom-left"></div>
+                <div class="env-bottom-right"></div>
+
+                <!-- TOP FLAP (z:20) -->
+                <div class="env-flap" id="envFlap"></div>
+                <div class="env-flap-line" id="envFlapLine"></div>
+
+                <!-- WAX SEAL (z:30) -->
+                <div class="wax-seal" id="waxSeal">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+                        <path d="M12 1L9 5h6L12 1zm0 22l3-4H9l3 4z" />
+                    </svg>
+                </div>
+
+            </div><!-- /envelope-shell -->
+
+            <div class="env-tap-hint" id="envHint">✦ Tap to open ✦</div>
+        </div><!-- /envelope-scene -->
+
+        <div class="env-scroll-hint" id="envScrollHint" onclick="goto('countdown')">Scroll down to celebrate ↓</div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section id="countdown">
+        <div class="cd-label">Counting down to forever</div>
+        <div class="cd-row">
+            <div class="cd-box">
+                <div class="cd-num" id="cd-d">--</div>
+                <div class="cd-unit">Days</div>
+            </div>
+            <div class="cd-sep">♦</div>
+            <div class="cd-box">
+                <div class="cd-num" id="cd-h">--</div>
+                <div class="cd-unit">Hours</div>
+            </div>
+            <div class="cd-sep">♦</div>
+            <div class="cd-box">
+                <div class="cd-num" id="cd-m">--</div>
+                <div class="cd-unit">Min</div>
+            </div>
+            <div class="cd-sep">♦</div>
+            <div class="cd-box">
+                <div class="cd-num" id="cd-s">--</div>
+                <div class="cd-unit">Sec</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story">
+        <div class="story-img-side">
+            <div class="rose-frame">
+                <div class="rose-frame-inner">
+                    <div id="storyPhotoWrap"></div>
+                </div>
+                <div class="rose-caption" id="storyCaption"></div>
+                <div class="rose-tag">Just<br>Us</div>
+            </div>
+        </div>
+        <div class="story-text-side">
+            <div class="story-eyebrow">Our Love Story</div>
+            <div class="story-title">Tales of<br>Our Heart</div>
+            <div class="story-body" id="storyBody"></div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="gallery-header">
+            <div class="g-eyebrow">Captured in Love</div>
+            <div class="g-title" id="gTitle"></div>
+            <div class="g-sub">Our most precious moments together</div>
+        </div>
+        <div class="c-outer">
+            <button class="carr-btn left" onclick="gallerySlide(-1)">&#8592;</button>
+            <div class="c-track" id="galleryTrack"></div>
+            <button class="carr-btn right" onclick="gallerySlide(1)">&#8594;</button>
+        </div>
+        <div class="g-dots" id="galleryDots"></div>
+    </section>
+
+    <!-- VENUE -->
+    <section id="venue">
+        <div class="venue-grid">
+            <div>
+                <div class="v-eyebrow">Where Love Unfolds</div>
+                <div class="v-title">The <span>Venue</span></div>
+                <div class="v-name" id="vName"></div>
+                <div class="v-rule"></div>
+                <div class="v-detail">
+                    <div class="v-icon">📍</div>
+                    <div>
+                        <div class="v-dlabel">Address</div>
+                        <div class="v-dtext" id="vAddress"></div>
+                    </div>
+                </div>
+                <div class="v-detail">
+                    <div class="v-icon">🕐</div>
+                    <div>
+                        <div class="v-dlabel">Schedule</div>
+                        <div class="v-dtext" id="vSchedule"></div>
+                    </div>
+                </div>
+                <div class="v-btns">
+                    <button class="v-btn" id="mapsBtn">Open in Maps</button>
+                    <button class="v-btn" onclick="goto('program')">View Program</button>
+                </div>
+            </div>
+            <div class="mapbox">
+                <div class="map-topbar"><a id="mapsLink" target="_blank">Open in Maps ↗</a></div>
+                <iframe class="map-iframe" id="mapFrame" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program">
+        <div class="prog-header">
+            <div class="prog-eyebrow">The Celebration</div>
+            <div class="prog-title">Evening <span>Program</span></div>
+        </div>
+        <div class="prog-timeline" id="progTimeline"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            Powered by <a href="https://eventinvite.info" target="_blank">eventinvite.info</a>
+            &nbsp;— Your Private Event Invitation Studio 🎉
+        </div>
+        <span class="footer-sep">♦</span>
+        <button class="footer-top" onclick="goTop()">Back to top ↑</button>
+    </footer>
+
+    <script>
+        /* ── POPULATE ── */
+        function t(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+        document.getElementById('navLogo').textContent = W.coupleNames;
+        document.getElementById('heroNames').innerHTML = W.brideName + ' <span>&</span> ' + W.groomName;
+        document.getElementById('heroSub').textContent = W.displayDate + ' ' + W.displayMonth + ' ' + W.displayYear + ' · ' + W.venueName;
+
+        /* invitation card content */
+        document.getElementById('icTagline').textContent = W.inviteTagline;
+        document.getElementById('icCouple').textContent = W.coupleNames;
+        document.getElementById('icMonth').textContent = W.displayMonth;
+        document.getElementById('icDay').textContent = W.displayDay;
+        document.getElementById('icDateNum').textContent = W.displayDate;
+        document.getElementById('icTime').textContent = W.displayTime;
+        document.getElementById('icYear').textContent = W.displayYear;
+        document.getElementById('icBlurb').textContent = W.inviteBlurb;
+        document.getElementById('icVenue').textContent = W.venueName;
+
+        document.getElementById('storyCaption').textContent = W.storyCaption;
+        document.getElementById('storyBody').textContent = W.storyText;
+        document.getElementById('gTitle').textContent = W.coupleNames;
+        document.getElementById('vName').textContent = W.venueName;
+        document.getElementById('vAddress').textContent = W.venueAddress;
+        document.getElementById('vSchedule').textContent = W.venueSchedule;
+        document.getElementById('mapsBtn').onclick = () => window.open(W.mapsLink, '_blank');
+        document.getElementById('mapsLink').href = W.mapsLink;
+        document.getElementById('mapFrame').src = W.mapsEmbed;
+
+        /* story photo */
+        const pw = document.getElementById('storyPhotoWrap');
+        pw.innerHTML = W.storyPhoto
+            ? `<img class="rose-photo" src="${t(W.storyPhoto)}" alt="${t(W.storyCaption)}">`
+            : `<div class="rose-placeholder"><span>Add photo filename<br>in the EDIT ZONE above</span></div>`;
+
+        /* program */
+        const tl = document.getElementById('progTimeline');
+        W.program.forEach((item) => {
+            const div = document.createElement('div'); div.className = 'prog-item';
+            div.innerHTML = `<div class="prog-time">${t(item.time)}</div><div class="prog-dot-wrap"><div class="prog-dot"></div></div><div><div class="prog-event">${t(item.event)}</div><div class="prog-desc">${t(item.desc)}</div></div>`;
+            tl.appendChild(div);
+        });
+
+        /* ── PETALS ── */
+        function makePetal() {
+            const p = document.createElement('div'); p.className = 'petal';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.animationDuration = (4 + Math.random() * 6) + 's';
+            p.style.animationDelay = (Math.random() * 8) + 's';
+            p.style.width = (8 + Math.random() * 10) + 'px';
+            p.style.height = (10 + Math.random() * 12) + 'px';
+            p.style.opacity = 0.4 + Math.random() * 0.4;
+            document.getElementById('petals').appendChild(p);
+            setTimeout(() => p.remove(), (10 + Math.random() * 6) * 1000);
+        }
+        setInterval(makePetal, 600);
+
+        /* ── NAV ── */
+        function goto(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
+        function goTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        /* ── HERO → ENV SECTION ── */
+        let envelopeOpened = false;
+
+        function goToEnv() {
+            document.getElementById('hero').classList.add('gone');
+            document.getElementById('envSection').classList.add('show');
+            setTimeout(() => document.getElementById('envSection').scrollIntoView({ behavior: 'smooth' }), 80);
+        }
+        function gotoEnv() {
+            document.getElementById('hero').classList.add('gone');
+            document.getElementById('envSection').classList.add('show');
+            setTimeout(() => document.getElementById('envSection').scrollIntoView({ behavior: 'smooth' }), 80);
+        }
+
+        /* ── ENVELOPE OPEN ── */
+        function openEnvelope() {
+            if (envelopeOpened) return;
+            envelopeOpened = true;
+
+            /* 1. break the seal */
+            document.getElementById('waxSeal').classList.add('broken');
+
+            /* 2. open the flap */
+            setTimeout(() => {
+                document.getElementById('envFlap').classList.add('open');
+                document.getElementById('envFlapLine').classList.add('open');
+            }, 300);
+
+            /* 3. card rises */
+            setTimeout(() => {
+                document.getElementById('invCard').classList.add('risen');
+            }, 750);
+
+            /* 4. hide tap hint, show scroll hint */
+            setTimeout(() => {
+                document.getElementById('envHint').classList.add('gone');
+                document.getElementById('envScrollHint').classList.add('show');
+            }, 1400);
+
+            /* stop scene from being clickable again */
+            document.getElementById('envelopeScene').style.cursor = 'default';
+        }
+
+        /* ── COUNTDOWN ── */
+        function tick() {
+            const diff = new Date(W.weddingDate + 'T' + W.weddingTime + W.timezone) - new Date();
+            if (diff <= 0) { ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => document.getElementById(id).textContent = '00'); return; }
+            const vals = { 'd': Math.floor(diff / 86400000), 'h': Math.floor((diff % 86400000) / 3600000), 'm': Math.floor((diff % 3600000) / 60000), 's': Math.floor((diff % 60000) / 1000) };
+            Object.entries(vals).forEach(([k, v]) => {
+                const el = document.getElementById('cd-' + k), str = String(v).padStart(2, '0');
+                if (el.textContent !== str) { el.classList.add('tick'); el.textContent = str; setTimeout(() => el.classList.remove('tick'), 150); }
+            });
+        }
+        tick(); setInterval(tick, 1000);
+
+        /* ── GALLERY ── */
+        let galCur = 0;
+        function buildGallery() {
+            const track = document.getElementById('galleryTrack'), dots = document.getElementById('galleryDots');
+            track.innerHTML = ''; dots.innerHTML = '';
+            W.gallery.forEach((p, i) => {
+                const el = document.createElement('div'); el.className = 'c-item'; el.style.background = p.color;
+                if (p.img) el.innerHTML = `<img src="${t(p.img)}" alt="${t(p.label)}">`;
+                el.innerHTML += `<div class="c-label">${t(p.label)}</div>`;
+                el.onclick = () => { galCur = i; renderGallery(); }; track.appendChild(el);
+                const dot = document.createElement('button'); dot.className = 'g-dot-btn' + (i === 0 ? ' on' : '');
+                dot.onclick = () => { galCur = i; renderGallery(); }; dots.appendChild(dot);
+            });
+            renderGallery();
+        }
+        function renderGallery() {
+            document.querySelectorAll('.c-item').forEach((el, i) => {
+                const o = i - galCur, a = Math.abs(o); if (a > 3) { el.style.opacity = '0'; el.style.pointerEvents = 'none'; return; }
+                const tx = o === 0 ? 0 : o > 0 ? (115 + a * 46) : -(115 + a * 46);
+                const op = [1, 0.7, 0.4, 0.15][a] || 0, w = [240, 134, 104, 88][a] || 88, h = [350, 260, 198, 158][a] || 158;
+                el.style.cssText = `width:${w}px;height:${h}px;transform:translateX(${tx}px) translateY(-50%);z-index:${10 - a};opacity:${op};filter:${a > 1 ? 'blur(1px)' : 'none'};pointer-events:${a === 0 ? 'none' : 'all'};position:absolute;top:50%;transition:all 0.6s cubic-bezier(0.4,0,0.2,1);display:flex;align-items:flex-end;justify-content:center;background:${W.gallery[i].color};border:0.5px solid rgba(196,66,90,0.2);`;
+            });
+            document.querySelectorAll('.g-dot-btn').forEach((d, i) => d.className = 'g-dot-btn' + (i === galCur ? ' on' : ''));
+        }
+        function gallerySlide(dir) { galCur = (galCur + dir + W.gallery.length) % W.gallery.length; renderGallery(); }
+        buildGallery();
+
+        /* ── PROGRAM ANIMATION ── */
+        const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.2 });
+        document.querySelectorAll('.prog-item').forEach((el, i) => { el.style.transitionDelay = (i * 0.12) + 's'; obs.observe(el); });
+    </script>
+</body>
+
+</html>

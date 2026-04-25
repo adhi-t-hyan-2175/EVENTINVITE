@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nair Family — Housewarming Ceremony ✨</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&family=Lora:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- ═══════════════════════════════════
+     ✏️  EDIT ALL YOUR DETAILS HERE
+═══════════════════════════════════ -->
+    <script>
+        const EVENT = {
+            familyName: "The Nair Family",
+            tagline: "With blessings and joy, we welcome you to our new home",
+            ceremony: "Griha Pravesh / Housewarming Ceremony",
+            date: "25th April 2026",
+            time: "6:30 AM onwards",
+            isoDate: "2026-04-25T06:30:00",
+            venue: "123 New Home Lane, Thrissur, Kerala",
+            inviteMsg: "With the blessings of God, we are delighted to invite you to our housewarming ceremony. Your presence will make this occasion even more special and memorable.",
+            contactName: "Mr. Nair",
+            contactNum: "+91 XXXXXXXX",
+            mapsLink: "https://maps.google.com/?q=Thrissur,Kerala",
+            mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125520!2d76.2673!3d10.8505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0806a2efdb2fb3%3A0x34b5a31a8a7067d8!2sThrissur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000",
+            whatsappMsg: "🏠 You are invited!\n\nThe Nair Family Housewarming Ceremony\n🗓️ 25th April 2026 | ⏰ 6:30 AM onwards\n📍 123 New Home Lane, Thrissur, Kerala\n\nWith blessings and joy, we welcome you to our new home! ✨",
+        };
+    </script>
+
+    <style>
+        /* ─────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: #08080f;
+            color: #e8e0d0;
+            font-family: 'Cormorant Garamond', serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ─────────────────────────────────────
+   CSS VARIABLES
+───────────────────────────────────── */
+        :root {
+            --bg: #08080f;
+            --bg2: #0e0e1c;
+            --bg3: #12121e;
+            --text: #e8e0d0;
+            --gold: #c9a84c;
+            --gold2: #e8c870;
+            --gold3: #f5e0a0;
+            --silver: #d4d0c8;
+            --muted: #706860;
+            --deep: #06061a;
+            --accent: #c9a84c;
+            --accent2: #a07830;
+            --border: rgba(201, 168, 76, 0.18);
+            --border2: rgba(201, 168, 76, 0.08);
+            --glow: rgba(201, 168, 76, 0.15);
+        }
+
+        /* ─────────────────────────────────────
+   FLOATING STAR PARTICLES
+───────────────────────────────────── */
+        #particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden
+        }
+
+        .particle {
+            position: absolute;
+            pointer-events: none;
+            animation: floatUp linear infinite;
+            color: var(--gold);
+            font-size: 10px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0
+            }
+
+            10% {
+                opacity: 0.6
+            }
+
+            90% {
+                opacity: 0.3
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(720deg);
+                opacity: 0
+            }
+        }
+
+        /* ─────────────────────────────────────
+   SPARKLE ON CLICK
+───────────────────────────────────── */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9990;
+            color: var(--gold);
+            animation: sparkleOut 0.65s ease forwards;
+        }
+
+        @keyframes sparkleOut {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(1.8) rotate(200deg);
+                opacity: 0
+            }
+        }
+
+        /* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 28px 70px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at 30% 50%, #1a1830, #06060e);
+        }
+
+        /* geometric borders */
+        .hero-geo {
+            position: absolute;
+            inset: 24px;
+            border: 0.5px solid var(--border2);
+            pointer-events: none
+        }
+
+        .hero-geo2 {
+            position: absolute;
+            inset: 44px;
+            border: 0.5px solid rgba(201, 168, 76, 0.04);
+            pointer-events: none
+        }
+
+        .hc {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-color: var(--gold);
+            border-style: solid;
+            border-width: 0;
+            opacity: 0.5
+        }
+
+        .hc.tl {
+            top: 24px;
+            left: 24px;
+            border-top-width: 1px;
+            border-left-width: 1px
+        }
+
+        .hc.tr {
+            top: 24px;
+            right: 24px;
+            border-top-width: 1px;
+            border-right-width: 1px
+        }
+
+        .hc.bl {
+            bottom: 24px;
+            left: 24px;
+            border-bottom-width: 1px;
+            border-left-width: 1px
+        }
+
+        .hc.br {
+            bottom: 24px;
+            right: 24px;
+            border-bottom-width: 1px;
+            border-right-width: 1px
+        }
+
+        /* star bg */
+        .star-field {
+            position: absolute;
+            inset: 0;
+            pointer-events: none
+        }
+
+        .star-dot {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: twinkle ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.1;
+                transform: scale(1)
+            }
+
+            to {
+                opacity: 0.7;
+                transform: scale(1.4)
+            }
+        }
+
+        .hero-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 24px rgba(201, 168, 76, 0.6));
+            animation: iconPulse 3s ease-in-out infinite
+        }
+
+        @keyframes iconPulse {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 16px rgba(201, 168, 76, 0.4))
+            }
+
+            50% {
+                filter: drop-shadow(0 0 36px rgba(201, 168, 76, 0.8))
+            }
+        }
+
+        .hero-eyebrow {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9.5px;
+            letter-spacing: 0.45em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+            opacity: 0.8;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(30px, 6.5vw, 62px);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--silver);
+            margin-bottom: 14px;
+        }
+
+        .hero-title em {
+            color: var(--gold);
+            font-style: italic
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(15px, 2.2vw, 19px);
+            color: rgba(232, 224, 208, 0.6);
+            max-width: 540px;
+            line-height: 1.85;
+            margin-bottom: 28px;
+        }
+
+        .hero-rule {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: center;
+            margin: 20px 0
+        }
+
+        .rule-line {
+            width: 60px;
+            height: 0.5px;
+            background: var(--gold);
+            opacity: 0.45
+        }
+
+        .rule-diamond {
+            width: 7px;
+            height: 7px;
+            background: var(--gold);
+            transform: rotate(45deg)
+        }
+
+        .hero-date-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .date-chip {
+            border: 0.5px solid var(--border);
+            padding: 9px 20px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            backdrop-filter: blur(8px);
+            background: rgba(201, 168, 76, 0.05);
+        }
+
+        /* ─────────────────────────────────────
+   ENVELOPE SECTION
+───────────────────────────────────── */
+        #env-section {
+            padding: 90px 20px;
+            text-align: center;
+            background: radial-gradient(ellipse at center, #1a1832, #060612);
+            position: relative;
+            z-index: 10;
+        }
+
+        .env-eyebrow {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.6;
+            margin-bottom: 10px;
+        }
+
+        .env-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(26px, 4vw, 38px);
+            font-weight: 300;
+            color: var(--silver);
+            margin-bottom: 6px;
+        }
+
+        .env-sub {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: rgba(232, 224, 208, 0.45);
+            margin-bottom: 52px;
+        }
+
+        /* ENVELOPE */
+        .env-scene {
+            position: relative;
+            width: 440px;
+            max-width: 90vw;
+            margin: 0 auto;
+            cursor: pointer;
+            filter: drop-shadow(0 20px 60px rgba(201, 168, 76, 0.25));
+            transition: filter 0.4s;
+        }
+
+        .env-scene:hover {
+            filter: drop-shadow(0 28px 80px rgba(201, 168, 76, 0.38))
+        }
+
+        .env-shell {
+            position: relative;
+            width: 100%;
+            height: 280px
+        }
+
+        /* envelope parts */
+        .env-back {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(155deg, #16142a, #0c0c1a);
+            border: 1px solid rgba(201, 168, 76, 0.28);
+        }
+
+        .env-side-l {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 140px 0 0 220px;
+            border-color: transparent transparent transparent #100e1e
+        }
+
+        .env-side-r {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 140px 220px 0 0;
+            border-color: transparent #100e1e transparent transparent
+        }
+
+        .env-bot-l {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 138px 220px;
+            border-color: transparent transparent #080814 transparent
+        }
+
+        .env-bot-r {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 220px 138px 0;
+            border-color: transparent transparent #080814 transparent
+        }
+
+        .env-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 168px 220px 0 220px;
+            border-color: #1a1830 transparent transparent transparent;
+            transform-origin: top center;
+            transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 20;
+        }
+
+        .env-flap.open {
+            transform: rotateX(180deg)
+        }
+
+        /* card inside */
+        .env-card-slot {
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            right: 14px;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 5;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .inv-card {
+            width: 100%;
+            background: linear-gradient(160deg, #14122a, #1e1c38);
+            border: 0.5px solid rgba(201, 168, 76, 0.28);
+            padding: 22px 20px 18px;
+            text-align: center;
+            position: relative;
+            transform: translateY(300px);
+            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s;
+        }
+
+        .inv-card.risen {
+            transform: translateY(0)
+        }
+
+        .inv-card::before {
+            content: '';
+            position: absolute;
+            inset: 7px;
+            border: 0.5px solid rgba(201, 168, 76, 0.1);
+            pointer-events: none
+        }
+
+        .cc {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-style: solid;
+            border-width: 0;
+            border-color: var(--gold)
+        }
+
+        .cc.tl {
+            top: 10px;
+            left: 10px;
+            border-top-width: 1px;
+            border-left-width: 1px
+        }
+
+        .cc.tr {
+            top: 10px;
+            right: 10px;
+            border-top-width: 1px;
+            border-right-width: 1px
+        }
+
+        .cc.bl {
+            bottom: 10px;
+            left: 10px;
+            border-bottom-width: 1px;
+            border-left-width: 1px
+        }
+
+        .cc.br {
+            bottom: 10px;
+            right: 10px;
+            border-bottom-width: 1px;
+            border-right-width: 1px
+        }
+
+        /* wax seal */
+        .wax {
+            position: absolute;
+            left: 50%;
+            top: 130px;
+            transform: translateX(-50%);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #c9a84c, #6b4a10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 30;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4), inset 0 1px 3px rgba(255, 255, 255, 0.15);
+            transition: transform 0.5s, opacity 0.4s;
+        }
+
+        .wax.cracked {
+            opacity: 0;
+            transform: translateX(-50%) scale(0) rotate(45deg)
+        }
+
+        .env-tap {
+            margin-top: 16px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.5;
+            animation: tapPulse 2.5s ease-in-out infinite;
+        }
+
+        .env-tap.done {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        @keyframes tapPulse {
+
+            0%,
+            100% {
+                opacity: 0.3
+            }
+
+            50% {
+                opacity: 0.7
+            }
+        }
+
+        /* ─────────────────────────────────────
+   FIREWORK CANVAS + BLAST TEXT
+───────────────────────────────────── */
+        #fw-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 9000;
+            pointer-events: none;
+            display: none;
+        }
+
+        #blast-text {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9500;
+            text-align: center;
+            display: none;
+            pointer-events: none;
+        }
+
+        #blast-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(26px, 5vw, 52px);
+            font-weight: 300;
+            color: var(--gold3);
+            text-shadow: 0 0 32px var(--gold), 0 0 60px rgba(201, 168, 76, 0.5);
+            animation: blastIn 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+            line-height: 1.3;
+        }
+
+        #blast-text p {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: clamp(13px, 2.5vw, 20px);
+            letter-spacing: 0.15em;
+            color: rgba(232, 224, 208, 0.8);
+            margin-top: 10px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes blastIn {
+            from {
+                transform: scale(0.4) rotate(-8deg);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1) rotate(0deg);
+                opacity: 1
+            }
+        }
+
+        /* ─────────────────────────────────────
+   INVITE MODAL
+───────────────────────────────────── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 8500;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(6px);
+        }
+
+        .modal-overlay.show {
+            display: flex
+        }
+
+        .modal-box {
+            background: linear-gradient(155deg, #14122a, #1e1c38);
+            border: 1px solid var(--border);
+            max-width: 460px;
+            width: 92vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px 34px;
+            text-align: center;
+            position: relative;
+            animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+            scrollbar-width: none;
+        }
+
+        .modal-box::-webkit-scrollbar {
+            display: none
+        }
+
+        .modal-box::before {
+            content: '';
+            position: absolute;
+            inset: 10px;
+            border: 0.5px solid rgba(201, 168, 76, 0.1);
+            pointer-events: none
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.82) translateY(28px);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: var(--gold);
+            opacity: 0.55;
+            transition: opacity 0.2s;
+        }
+
+        .modal-close:hover {
+            opacity: 1
+        }
+
+        .modal-icon {
+            font-size: 38px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.5))
+        }
+
+        .modal-sub {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 8.5px;
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        .modal-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            font-weight: 300;
+            color: var(--gold2);
+            margin-bottom: 6px;
+        }
+
+        .modal-rule {
+            width: 40px;
+            height: 0.5px;
+            background: var(--gold);
+            margin: 16px auto;
+            opacity: 0.6
+        }
+
+        .modal-msg {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 14.5px;
+            color: rgba(232, 224, 208, 0.65);
+            line-height: 1.88;
+            margin-bottom: 8px;
+        }
+
+        .modal-info {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11.5px;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            margin: 7px 0;
+        }
+
+        .modal-info span {
+            color: var(--silver);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            margin-left: 4px
+        }
+
+        /* ─────────────────────────────────────
+   EVENT DETAILS SECTION
+───────────────────────────────────── */
+        #details {
+            padding: 80px 20px;
+            background: var(--bg2);
+            border-top: 0.5px solid var(--border);
+            border-bottom: 0.5px solid var(--border);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            max-width: 700px;
+            margin: 36px auto 0;
+        }
+
+        .detail-box {
+            background: var(--bg2);
+            padding: 32px 20px;
+            text-align: center;
+        }
+
+        .det-icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.35))
+        }
+
+        .det-label {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 8px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.65;
+            margin-bottom: 8px;
+        }
+
+        .det-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--silver);
+        }
+
+        /* ─────────────────────────────────────
+   COUNTDOWN
+───────────────────────────────────── */
+        #countdown {
+            padding: 60px 20px;
+            text-align: center;
+            background: var(--bg3);
+            border-bottom: 0.5px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cd-label-txt {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.5;
+            margin-bottom: 28px;
+        }
+
+        .cd-boxes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .cd-box {
+            text-align: center;
+            padding: 18px 16px;
+            min-width: 80px;
+            background: rgba(201, 168, 76, 0.05);
+            border: 0.5px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .cd-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1;
+            color: var(--gold2);
+            display: block;
+        }
+
+        .cd-unit {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.55);
+            margin-top: 5px;
+            display: block;
+        }
+
+        .cd-sep {
+            font-size: 20px;
+            color: var(--gold);
+            opacity: 0.35;
+            margin-bottom: 6px
+        }
+
+        /* ─────────────────────────────────────
+   MAP SECTION
+───────────────────────────────────── */
+        #location {
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--bg);
+            position: relative;
+            z-index: 10;
+        }
+
+        .map-box {
+            max-width: 680px;
+            margin: 32px auto 0;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .map-topbar {
+            padding: 11px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0.5px solid var(--border);
+            background: rgba(201, 168, 76, 0.04);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            display: block;
+            filter: invert(1) hue-rotate(180deg) saturate(0.5) brightness(0.7)
+        }
+
+        .map-actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .btn-gold {
+            padding: 12px 28px;
+            background: var(--accent2);
+            color: var(--bg);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold);
+            transform: translateY(-2px)
+        }
+
+        /* ─────────────────────────────────────
+   CONTACT SECTION
+───────────────────────────────────── */
+        #contact {
+            padding: 70px 20px;
+            text-align: center;
+            background: var(--bg2);
+            border-top: 0.5px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 40px;
+            margin-top: 28px;
+            border: 0.5px solid var(--border);
+            background: rgba(201, 168, 76, 0.04);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-icon-big {
+            font-size: 32px;
+            filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.4))
+        }
+
+        .contact-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--silver);
+            margin-bottom: 4px;
+        }
+
+        .contact-num {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        /* ─────────────────────────────────────
+   SHARE SECTION
+───────────────────────────────────── */
+        #share {
+            padding: 60px 20px;
+            text-align: center;
+            background: var(--bg3);
+            border-top: 0.5px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+
+        .share-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px
+        }
+
+        .sh-btn {
+            padding: 13px 26px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sh-btn:hover {
+            transform: translateY(-3px)
+        }
+
+        .sh-wa {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.25)
+        }
+
+        .sh-ig {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(220, 39, 67, 0.25)
+        }
+
+        /* ─────────────────────────────────────
+   SHARED SECTION TYPOGRAPHY
+───────────────────────────────────── */
+        .sec-eyebrow {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.55;
+            margin-bottom: 10px;
+        }
+
+        .sec-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 300;
+            color: var(--silver);
+            margin-bottom: 0;
+        }
+
+        /* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────── */
+        footer {
+            padding: 28px 20px;
+            text-align: center;
+            background: var(--deep);
+            border-top: 0.5px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-text {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            color: rgba(232, 224, 208, 0.35);
+        }
+
+        .footer-text a {
+            color: var(--gold);
+            opacity: 0.7;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer-text a:hover {
+            opacity: 1
+        }
+
+        .footer-up {
+            margin-top: 10px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.35;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer-up:hover {
+            opacity: 0.7
+        }
+
+        /* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+        @media(max-width:580px) {
+            .env-shell {
+                height: 230px
+            }
+
+            .env-flap {
+                border-width: 138px 45vw 0 45vw
+            }
+
+            .env-side-l {
+                border-width: 115px 0 0 45vw
+            }
+
+            .env-side-r {
+                border-width: 115px 45vw 0 0
+            }
+
+            .env-bot-l {
+                border-width: 0 0 113px 45vw
+            }
+
+            .env-bot-r {
+                border-width: 0 45vw 113px 0
+            }
+
+            .wax {
+                top: 108px
+            }
+
+            .modal-box {
+                padding: 26px 18px
+            }
+
+            .cd-box {
+                min-width: 60px;
+                padding: 12px 6px
+            }
+
+            .cd-num {
+                font-size: 28px
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .fade-in {
+            animation: fadeUp 0.8s ease both
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── PARTICLES ── -->
+    <div id="particles"></div>
+    <div id="sparkle-wrap" style="position:fixed;inset:0;pointer-events:none;z-index:9989"></div>
+
+    <!-- ── FIREWORK CANVAS ── -->
+    <canvas id="fw-canvas"></canvas>
+    <div id="blast-text">
+        <h2 id="blastLine1">Welcome to Our New Home 🏠</h2>
+        <p id="blastLine2">Griha Pravesh · 2026</p>
+    </div>
+
+    <!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+    <section id="hero">
+        <div class="hero-geo"></div>
+        <div class="hero-geo2"></div>
+        <div class="hc tl"></div>
+        <div class="hc tr"></div>
+        <div class="hc bl"></div>
+        <div class="hc br"></div>
+        <div class="star-field" id="starField"></div>
+
+        <div class="hero-icon">🏠</div>
+        <div class="hero-eyebrow">Auspicious Occasion · 2026</div>
+        <div class="hero-title">
+            <em>The Family</em><br>Housewarming Ceremony
+        </div>
+        <div class="hero-tagline">
+            With blessings and joy, we welcome you to our new home
+        </div>
+        <div class="hero-rule">
+            <div class="rule-line"></div>
+            <div class="rule-diamond"></div>
+            <div class="rule-line"></div>
+        </div>
+        <div class="hero-date-bar">
+            <div class="date-chip">🗓️ &nbsp;25th April 2026</div>
+            <div class="date-chip">⏰ &nbsp;6:30 AM onwards</div>
+            <div class="date-chip">🏛️ &nbsp;Griha Pravesh</div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     ENVELOPE
+═══════════════════════════════════ -->
+    <section id="env-section">
+        <div class="env-eyebrow">Your Invitation Awaits</div>
+        <div class="env-heading">Open the Envelope 💌</div>
+        <div class="env-sub">Tap the wax seal to reveal your invitation</div>
+
+        <div class="env-scene" id="envScene" onclick="openEnvelope()">
+            <div class="env-shell">
+                <div class="env-back"></div>
+
+                <!-- invitation card -->
+                <div class="env-card-slot">
+                    <div class="inv-card" id="invCard">
+                        <div class="cc tl"></div>
+                        <div class="cc tr"></div>
+                        <div class="cc bl"></div>
+                        <div class="cc br"></div>
+                        <div style="font-size:26px;margin-bottom:10px;">🏠</div>
+                        <div
+                            style="font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);opacity:0.55;margin-bottom:10px;">
+                            Griha Pravesh · Housewarming</div>
+                        <div
+                            style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--silver);margin-bottom:8px;">
+                            The Nair Family</div>
+                        <div style="width:36px;height:0.5px;background:var(--gold);opacity:0.3;margin:10px auto;"></div>
+                        <div
+                            style="font-family:'Lora',serif;font-style:italic;font-size:11.5px;color:rgba(232,224,208,0.55);line-height:1.75;margin-bottom:12px;">
+                            With the blessings of God, we delight<br>in inviting you to our home</div>
+                        <div
+                            style="font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:0.2em;color:var(--gold);opacity:0.5;margin-bottom:5px;">
+                            DATE &amp; TIME</div>
+                        <div
+                            style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--silver);margin-bottom:3px;">
+                            25th April 2026</div>
+                        <div
+                            style="font-family:'Lora',serif;font-style:italic;font-size:12px;color:rgba(232,224,208,0.5);margin-bottom:10px;">
+                            6:30 AM onwards</div>
+                        <div style="width:36px;height:0.5px;background:var(--gold);opacity:0.3;margin:10px auto;"></div>
+                        <div
+                            style="font-family:'Josefin Sans',sans-serif;font-size:7.5px;letter-spacing:0.2em;color:var(--gold);opacity:0.45;margin-bottom:4px;">
+                            VENUE</div>
+                        <div
+                            style="font-family:'Cormorant Garamond',serif;font-size:12px;color:rgba(232,224,208,0.55);">
+                            123 New Home Lane, Thrissur, Kerala</div>
+                    </div>
+                </div>
+
+                <div class="env-side-l"></div>
+                <div class="env-side-r"></div>
+                <div class="env-bot-l"></div>
+                <div class="env-bot-r"></div>
+                <div class="env-flap" id="envFlap"></div>
+
+                <!-- wax seal -->
+                <div class="wax" id="waxSeal">✦</div>
+            </div>
+            <div class="env-tap" id="envTap">✦ &nbsp;Tap to Open&nbsp; ✦</div>
+        </div>
+    </section>
+
+    <!-- ── INVITE MODAL ── -->
+    <div class="modal-overlay" id="invModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-icon">🏠</div>
+            <div class="modal-sub">Griha Pravesh · Housewarming Ceremony</div>
+            <div class="modal-title" id="modalFamily">The Nair Family</div>
+            <div class="modal-rule"></div>
+            <div class="modal-msg" id="modalMsg">
+                With the blessings of God, we are delighted to invite you to our housewarming ceremony. Your presence
+                will make this occasion even more special and memorable.
+            </div>
+            <div class="modal-rule"></div>
+            <div class="modal-info">🗓️ <span>25th April 2026</span></div>
+            <div class="modal-info">⏰ <span>6:30 AM onwards</span></div>
+            <div class="modal-info">🏛️ <span>Griha Pravesh / Housewarming</span></div>
+            <div class="modal-info">📍 <span>123 New Home Lane, Thrissur, Kerala</span></div>
+            <div class="modal-info">📞 <span>Mr. Nair — +91 XXXXXXXX</span></div>
+            <div class="modal-rule"></div>
+            <div class="share-row">
+                <a class="sh-btn sh-wa" id="modalWa" href="#" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    WhatsApp
+                </a>
+                <button class="sh-btn sh-ig" onclick="shareIG()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                    Instagram
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════
+     EVENT DETAILS
+═══════════════════════════════════ -->
+    <section id="details">
+        <div class="sec-eyebrow">Occasion Details</div>
+        <div class="sec-title">Event Information</div>
+        <div class="detail-grid">
+            <div class="detail-box">
+                <div class="det-icon">🗓️</div>
+                <div class="det-label">Date</div>
+                <div class="det-val">25th April 2026</div>
+            </div>
+            <div class="detail-box">
+                <div class="det-icon">⏰</div>
+                <div class="det-label">Time</div>
+                <div class="det-val">6:30 AM onwards</div>
+            </div>
+            <div class="detail-box">
+                <div class="det-icon">🏛️</div>
+                <div class="det-label">Ceremony</div>
+                <div class="det-val" style="font-size:15px">Griha Pravesh</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     COUNTDOWN
+═══════════════════════════════════ -->
+    <section id="countdown">
+        <div class="cd-label-txt">Counting Down to the Ceremony</div>
+        <div class="cd-boxes">
+            <div class="cd-box"><span class="cd-num" id="cd-d">--</span><span class="cd-unit">Days</span></div>
+            <div class="cd-sep">◆</div>
+            <div class="cd-box"><span class="cd-num" id="cd-h">--</span><span class="cd-unit">Hours</span></div>
+            <div class="cd-sep">◆</div>
+            <div class="cd-box"><span class="cd-num" id="cd-m">--</span><span class="cd-unit">Mins</span></div>
+            <div class="cd-sep">◆</div>
+            <div class="cd-box"><span class="cd-num" id="cd-s">--</span><span class="cd-unit">Secs</span></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     LOCATION / MAP
+═══════════════════════════════════ -->
+    <section id="location">
+        <div class="sec-eyebrow">Find Us</div>
+        <div class="sec-title">Location 📍</div>
+        <div class="map-box">
+            <div class="map-topbar">
+                <span>📍 Thrissur, Kerala</span>
+                <a class="btn-gold" href="https://maps.google.com/?q=Thrissur,Kerala" target="_blank"
+                    style="padding:7px 16px;font-size:10px">Open Maps ↗</a>
+            </div>
+            <iframe class="map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125520!2d76.2673!3d10.8505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0806a2efdb2fb3%3A0x34b5a31a8a7067d8!2sThrissur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1680000000000"
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="map-actions">
+            <a class="btn-gold" href="https://maps.google.com/?q=Thrissur,Kerala" target="_blank">📍 View Location on
+                Maps</a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+    <section id="contact">
+        <div class="sec-eyebrow">Get In Touch</div>
+        <div class="sec-title">Contact Us 📞</div>
+        <div class="contact-card">
+            <div class="contact-icon-big">📞</div>
+            <div>
+                <div class="contact-name">Mr. Nair</div>
+                <div class="contact-num">+91 XXXXXXXX</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     SHARE
+═══════════════════════════════════ -->
+    <section id="share">
+        <div class="sec-eyebrow">Spread the Joy</div>
+        <div class="sec-title" style="margin-bottom:0">Share the Invitation 🎉</div>
+        <div class="share-row">
+            <a class="sh-btn sh-wa" id="shareWaBottom" href="#" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Share on WhatsApp
+            </a>
+            <button class="sh-btn sh-ig" onclick="shareIG()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+                Share Story
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-text">
+            Powered by <a href="https://eventinvite.info" target="_blank">eventinvite.info</a>
+            &nbsp;— Your Private Event Invitation Studio 🎉
+        </div>
+        <button class="footer-up" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+    </footer>
+
+    <!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+    <script>
+        /* ── Apply EVENT config ── */
+        document.getElementById('modalFamily').textContent = EVENT.familyName;
+        document.getElementById('modalMsg').textContent = EVENT.inviteMsg;
+        document.getElementById('blastLine1').textContent = "Welcome to Our New Home 🏠";
+        document.getElementById('blastLine2').textContent = "Griha Pravesh · 2026";
+
+        /* ── WhatsApp links ── */
+        const waHref = 'https://wa.me/?text=' + encodeURIComponent(EVENT.whatsappMsg);
+        document.getElementById('modalWa').href = waHref;
+        document.getElementById('shareWaBottom').href = waHref;
+
+        /* ── Star field ── */
+        (function () {
+            const sf = document.getElementById('starField');
+            for (let i = 0; i < 80; i++) {
+                const s = document.createElement('div');
+                s.className = 'star-dot';
+                const sz = 0.8 + Math.random() * 2;
+                s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random() * 100}%;left:${Math.random() * 100}%;animation-duration:${2 + Math.random() * 4}s;animation-delay:${Math.random() * 4}s;opacity:${0.2 + Math.random() * 0.5}`;
+                sf.appendChild(s);
+            }
+        })();
+
+        /* ── Floating particles ── */
+        (function () {
+            const container = document.getElementById('particles');
+            const icons = ['✦', '✧', '★', '·', '◆', '◇'];
+            for (let i = 0; i < 18; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.textContent = icons[Math.floor(Math.random() * icons.length)];
+                p.style.left = (Math.random() * 100) + 'vw';
+                p.style.animationDuration = (10 + Math.random() * 16) + 's';
+                p.style.animationDelay = (Math.random() * 14) + 's';
+                p.style.fontSize = (8 + Math.random() * 12) + 'px';
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        })();
+
+        /* ── Sparkle on click ── */
+        document.addEventListener('click', function (e) {
+            const glyphs = ['✦', '✧', '★', '·', '◆'];
+            for (let i = 0; i < 6; i++) {
+                const s = document.createElement('div');
+                s.className = 'sparkle';
+                s.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+                s.style.cssText = `left:${e.clientX + (Math.random() - .5) * 44}px;top:${e.clientY + (Math.random() - .5) * 44}px;font-size:${7 + Math.random() * 11}px;`;
+                document.getElementById('sparkle-wrap').appendChild(s);
+                setTimeout(() => s.remove(), 700);
+            }
+        });
+
+        /* ── Countdown ── */
+        function tick() {
+            const target = new Date(EVENT.isoDate + '+05:30');
+            const diff = target - new Date();
+            if (diff <= 0) {
+                ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => document.getElementById(id).textContent = '00');
+                return;
+            }
+            const pad = v => String(v).padStart(2, '0');
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            document.getElementById('cd-d').textContent = pad(d);
+            document.getElementById('cd-h').textContent = pad(h);
+            document.getElementById('cd-m').textContent = pad(m);
+            document.getElementById('cd-s').textContent = pad(s);
+        }
+        tick(); setInterval(tick, 1000);
+
+        /* ── FIREWORK ENGINE ── */
+        const canvas = document.getElementById('fw-canvas');
+        const ctx = canvas.getContext('2d');
+        let parts = [];
+
+        function resizeFW() { canvas.width = innerWidth; canvas.height = innerHeight; }
+        resizeFW(); window.addEventListener('resize', resizeFW);
+
+        class Part {
+            constructor(x, y, col) {
+                this.x = x; this.y = y; this.col = col;
+                this.vx = (Math.random() - .5) * 14;
+                this.vy = (Math.random() - .5) * 14;
+                this.life = 1;
+                this.decay = .018 + Math.random() * .018;
+                this.r = 1.5 + Math.random() * 3.5;
+            }
+            step() { this.x += this.vx; this.y += this.vy; this.vy += .18; this.life -= this.decay; }
+            draw() {
+                ctx.save(); ctx.globalAlpha = Math.max(0, this.life);
+                ctx.fillStyle = this.col;
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        class Trail {
+            constructor(x, y) { this.x = x; this.y = y; this.life = 1; }
+            step() { this.life -= .1; }
+            draw() {
+                ctx.save(); ctx.globalAlpha = Math.max(0, this.life) * .5;
+                ctx.fillStyle = '#c9a84c';
+                ctx.beginPath(); ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        let shotX = 0, shotY = 0, shotTargetY = 0, shotActive = false, trailPts = [];
+
+        function startShot(startX, startY) {
+            shotX = startX; shotY = startY;
+            shotTargetY = canvas.height * 0.14;
+            shotActive = true; trailPts = [];
+        }
+
+        function explode(x, y) {
+            const colors = ['#c9a84c', '#e8c870', '#f5e0a0', '#ffffff', '#a07830', '#fff8e0', '#e0c060'];
+            for (let i = 0; i < 160; i++) parts.push(new Part(x, y, colors[Math.floor(Math.random() * colors.length)]));
+            playBlastSound();
+            setTimeout(() => {
+                const bt = document.getElementById('blast-text');
+                bt.style.display = 'block';
+                setTimeout(() => { bt.style.display = 'none'; }, 2200);
+                setTimeout(() => { canvas.style.display = 'none'; openModal(); }, 2600);
+            }, 350);
+        }
+
+        function animFW() {
+            if (canvas.style.display === 'none') return;
+            ctx.fillStyle = 'rgba(8,8,15,.22)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            if (shotActive) {
+                trailPts.push(new Trail(shotX, shotY));
+                shotY -= 22;
+                if (shotY <= shotTargetY) { shotActive = false; explode(shotX, shotY); }
+                trailPts.forEach(t => { t.step(); t.draw(); });
+                ctx.save(); ctx.globalAlpha = 1;
+                ctx.fillStyle = '#f5e0a0';
+                ctx.beginPath(); ctx.arc(shotX, shotY, 5, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            parts = parts.filter(p => { p.step(); p.draw(); return p.life > 0; });
+            requestAnimationFrame(animFW);
+        }
+
+        /* ── Blast sound (Web Audio API) ── */
+        function playBlastSound() {
+            try {
+                const ac = new (window.AudioContext || window.webkitAudioContext)();
+                // Boom
+                const buf1 = ac.createBuffer(1, ac.sampleRate * .6, ac.sampleRate);
+                const d1 = buf1.getChannelData(0);
+                for (let i = 0; i < d1.length; i++) d1[i] = (Math.random() * 2 - 1) * Math.exp(-i / (ac.sampleRate * .1));
+                const s1 = ac.createBufferSource();
+                const g1 = ac.createGain(); g1.gain.value = 0.7;
+                s1.buffer = buf1; s1.connect(g1); g1.connect(ac.destination); s1.start();
+                // Sparkle tail
+                const osc = ac.createOscillator();
+                const g2 = ac.createGain(); g2.gain.setValueAtTime(0.25, 0); g2.gain.exponentialRampToValueAtTime(0.001, 0.8);
+                osc.frequency.setValueAtTime(1200, 0); osc.frequency.exponentialRampToValueAtTime(400, .8);
+                osc.connect(g2); g2.connect(ac.destination); osc.start(); osc.stop(ac.currentTime + 0.8);
+            } catch (e) { }
+        }
+
+        /* ── Envelope open sequence ── */
+        let envOpened = false;
+        function openEnvelope() {
+            if (envOpened) return;
+            envOpened = true;
+
+            const wax = document.getElementById('waxSeal');
+            const flap = document.getElementById('envFlap');
+            const card = document.getElementById('invCard');
+            const hint = document.getElementById('envTap');
+
+            wax.style.transition = 'transform .45s,opacity .35s';
+            wax.style.opacity = '0';
+            wax.style.transform = 'translateX(-50%) scale(0) rotate(45deg)';
+            hint.classList.add('done');
+            document.getElementById('envScene').style.cursor = 'default';
+
+            setTimeout(() => { flap.classList.add('open'); }, 320);
+            setTimeout(() => { card.classList.add('risen'); }, 750);
+
+            setTimeout(() => {
+                // get envelope center for skyshot start
+                const env = document.getElementById('envScene');
+                const rect = env.getBoundingClientRect();
+                const sx = rect.left + rect.width / 2;
+                const sy = rect.top + rect.height / 2;
+
+                canvas.style.display = 'block';
+                startShot(sx, sy);
+                animFW();
+            }, 1400);
+        }
+
+        function openModal() {
+            document.getElementById('invModal').classList.add('show');
+        }
+        function closeModal() {
+            document.getElementById('invModal').classList.remove('show');
+        }
+        document.getElementById('invModal').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
+
+        /* ── Instagram share ── */
+        function shareIG() {
+            const text = `🏠 The Nair Family Housewarming Ceremony\n🗓️ ${EVENT.date} | ⏰ ${EVENT.time}\n📍 ${EVENT.venue}\n\n${EVENT.tagline} ✨`;
+            if (navigator.share) {
+                navigator.share({ title: 'Housewarming Invitation', text, url: location.href });
+            } else {
+                navigator.clipboard.writeText(text + '\n' + location.href)
+                    .then(() => alert('Invitation text copied! Share it on Instagram 📋'))
+                    .catch(() => alert('Share link: ' + location.href));
+            }
+        }
+    </script>
+</body>
+
+</html>

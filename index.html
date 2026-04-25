@@ -4,7 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Invite — Celebrate Digitally</title>
+
+    <!-- ✅ SEO: Primary Title Tag -->
+    <title>Event Invite — Beautiful Digital Invitations for Weddings, Birthdays & More</title>
+
+    <!-- ✅ SEO: Meta Description -->
+    <meta name="description"
+        content="Create stunning digital event invitations online. Elegant wedding invitations, birthday invitations, housewarming cards, and shop launch announcements — beautifully designed and easy to share.">
+
+    <!-- ✅ SEO: Keywords -->
+    <meta name="keywords"
+        content="event invitation, wedding invitation, birthday invitation, online invite, digital invitation, housewarming invitation, party invitation, event card, invite online, digital invite sharing, custom event invite">
+
+    <!-- ✅ SEO: Robots & Indexing -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Event Invite">
+
+    <!-- ✅ SEO: Canonical URL (update with real domain) -->
+    <link rel="canonical" href="https://www.eventinvite.in/">
+
+    <!-- ✅ SEO: Open Graph for social sharing -->
+    <meta property="og:title" content="Event Invite — Beautiful Digital Invitations Online">
+    <meta property="og:description"
+        content="Elegant digital invitations for weddings, birthdays, housewarmings, and more. Share your celebration beautifully.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.eventinvite.in/">
+    <meta property="og:image" content="https://www.eventinvite.in/images/og-cover.jpg">
+
+    <!-- ✅ SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Event Invite — Digital Invitations Online">
+    <meta name="twitter:description"
+        content="Stunning digital invitations for every celebration. Wedding, birthday, housewarming & more.">
+
+    <!-- ✅ SEO: Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Event Invite",
+      "description": "Digital invitation design service for weddings, birthdays, housewarmings, and shop launches.",
+      "url": "https://www.eventinvite.in/",
+      "email": "eventinvite.2175@gmail.com",
+      "telephone": "+919072297408",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "serviceType": ["Wedding Invitation", "Birthday Invitation", "Housewarming Invitation", "Shop Launch Invitation"]
+    }
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -98,7 +148,7 @@
             background: var(--terra2);
         }
 
-        /* HERO — full centered */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -697,6 +747,129 @@
             font-weight: 300;
         }
 
+        /* ===== SEO CONTENT SECTION ===== */
+        .seo-content {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .seo-head {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .seo-main-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2rem, 3.5vw, 3.2rem);
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .seo-intro {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--mid);
+            line-height: 1.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .seo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            margin-top: 80px;
+        }
+
+        .seo-block {
+            padding: 52px 44px;
+            background: var(--warm);
+            border-radius: 2px;
+            border-left: 4px solid var(--terra);
+            transition: box-shadow 0.3s;
+        }
+
+        .seo-block:hover {
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
+        }
+
+        .seo-block-icon {
+            font-size: 2rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .seo-block h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .seo-block p {
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: var(--mid);
+            line-height: 1.9;
+        }
+
+        .seo-sharing {
+            padding: 80px 0 0;
+        }
+
+        .seo-sharing-inner {
+            background: var(--dark);
+            border-radius: 4px;
+            padding: 72px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .seo-sharing-text h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            color: var(--white);
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .seo-sharing-text p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .seo-sharing-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .seo-sharing-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .seo-sharing-list li::before {
+            content: '✦';
+            color: var(--terra);
+            font-size: 0.6rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
         /* CLOSING */
         .closing {
             padding: 160px 80px;
@@ -887,7 +1060,8 @@
             .ig,
             .vc-grid,
             .ap-g,
-            .p-g {
+            .p-g,
+            .seo-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -910,33 +1084,90 @@
                 gap: 10px;
                 text-align: center;
             }
+
+            .seo-sharing-inner {
+                grid-template-columns: 1fr;
+                padding: 48px 28px;
+                gap: 40px;
+            }
+
+            .seo-block {
+                padding: 36px 28px;
+            }
+        }
+
+        /* ===== SAMPLES SECTION ===== */
+        .samples {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .sample-card {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            border-radius: 6px;
+            background: var(--warm);
+            transition: 0.4s;
+        }
+
+        .sample-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .sample-info {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .sample-card:hover {
+            transform: translateY(-6px);
+        }
+
+        @media(max-width:900px) {
+            .sample-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-logo">Event Invite</div>
-        <ul class="nav-links">
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#what">Our Work</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" class="nav-cta">Get Started</a>
-    </nav>
+    <!-- ✅ SEO: Semantic <header> wrapping nav -->
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-logo">Event Invite</div>
+            <ul class="nav-links">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#what">Our Work</a></li>
+                <li><a href="#samples">Samples</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Started</a>
+        </nav>
+    </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-deco-circle"></div>
-        <div class="hero-deco-ring"></div>
-        <div class="hero-deco-ring2"></div>
+    <!-- HERO — ✅ SEO: h1 is the primary page heading -->
+    <section class="hero" aria-label="Hero">
+        <div class="hero-deco-circle" aria-hidden="true"></div>
+        <div class="hero-deco-ring" aria-hidden="true"></div>
+        <div class="hero-deco-ring2" aria-hidden="true"></div>
         <div class="hero-center">
             <div class="hero-pill">Event Invite — Official</div>
-            <h1 class="hero-h1">Where every celebration<br>finds its <span>digital presence.</span></h1>
-            <p class="hero-p">A refined online experience crafted for weddings, birthdays, openings, and every
-                meaningful moment.</p>
+            <!-- ✅ SEO: Single, keyword-rich H1 -->
+            <h1 class="hero-h1">Beautiful Digital Event Invitations —<br>for every <span>meaningful moment.</span></h1>
+            <p class="hero-p">Design and share elegant online invitations for weddings, birthdays, housewarmings, and
+                every celebration that deserves a beautiful digital presence.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-f">Start Your Story</a>
                 <a href="#what" class="btn-o">Explore Our Work</a>
@@ -945,17 +1176,17 @@
     </section>
 
     <!-- STATS BAR -->
-    <div class="stats">
+    <div class="stats" aria-label="Key statistics">
         <div class="stat">
             <div class="stat-n">100+</div>
             <div class="stat-l">Events Created</div>
         </div>
-        <div class="stat-div"></div>
+        <div class="stat-div" aria-hidden="true"></div>
         <div class="stat">
             <div class="stat-n">4</div>
             <div class="stat-l">Event Types</div>
         </div>
-        <div class="stat-div"></div>
+        <div class="stat-div" aria-hidden="true"></div>
         <div class="stat">
             <div class="stat-n">∞</div>
             <div class="stat-l">Memories Made</div>
@@ -963,20 +1194,20 @@
     </div>
 
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" aria-label="Introduction">
         <div class="sw">
             <div class="ig">
                 <div class="ic">
-                    <div class="ic-n">01</div>
+                    <div class="ic-n" aria-hidden="true">01</div>
                     <p class="ic-t">Modern elegance, timeless design, and a refined identity for every occasion.</p>
                 </div>
                 <div class="ic" style="transition-delay:0.15s">
-                    <div class="ic-n">02</div>
+                    <div class="ic-n" aria-hidden="true">02</div>
                     <p class="ic-t">Thoughtfully designed digital invites and websites with a calm, premium aesthetic.
                     </p>
                 </div>
                 <div class="ic" style="transition-delay:0.3s">
-                    <div class="ic-n">03</div>
+                    <div class="ic-n" aria-hidden="true">03</div>
                     <p class="ic-t">A seamless space to share your story, your event, and your guests.</p>
                 </div>
             </div>
@@ -984,62 +1215,172 @@
     </section>
 
     <!-- VISION -->
-    <section class="vision" id="vision">
+    <section class="vision" id="vision" aria-label="Our Vision">
         <div class="sw">
             <div class="v-head">
                 <div class="lbl">Our Vision</div>
+                <!-- ✅ SEO: H2 for section heading -->
                 <h2 class="v-title">A digital presence for every celebration.</h2>
                 <p class="v-sub">Designed to feel elegant, personal, and effortlessly memorable.</p>
             </div>
             <div class="vc-grid">
                 <div class="vc">
-                    <div class="vc-ico">✦</div>
-                    <div class="vc-h">First Impression</div>
+                    <div class="vc-ico" aria-hidden="true">✦</div>
+                    <h3 class="vc-h">First Impression</h3>
                     <div class="vc-s">A strong and refined beginning</div>
-                    <p class="vc-d">Every detail is crafted to create an immediate impact.</p>
+                    <p class="vc-d">Every detail is crafted to create an immediate impact on your guests from the
+                        moment they open your digital invitation.</p>
                 </div>
                 <div class="vc" style="transition-delay:0.15s">
-                    <div class="vc-ico">◈</div>
-                    <div class="vc-h">Clarity</div>
+                    <div class="vc-ico" aria-hidden="true">◈</div>
+                    <h3 class="vc-h">Clarity</h3>
                     <div class="vc-s">Everything in one place</div>
-                    <p class="vc-d">Your event details are organised in a simple and beautiful flow.</p>
+                    <p class="vc-d">Your event details — date, time, venue, RSVP — are organised in a simple,
+                        beautiful flow that guests can follow effortlessly.</p>
                 </div>
                 <div class="vc" style="transition-delay:0.3s">
-                    <div class="vc-ico">◎</div>
-                    <div class="vc-h">Sharing</div>
+                    <div class="vc-ico" aria-hidden="true">◎</div>
+                    <h3 class="vc-h">Sharing</h3>
                     <div class="vc-s">Made for everyone</div>
-                    <p class="vc-d">Easily accessible for guests, friends, and family.</p>
+                    <p class="vc-d">Easily shareable via WhatsApp, email, or any platform — instantly accessible for
+                        guests, friends, and family around the world.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHAT -->
-    <section class="what" id="what">
+    <!-- SAMPLES -->
+    <section class="samples" id="samples" aria-label="Sample Invitations">
         <div class="sw">
-            <div class="wl">
-                <div class="w-art">
-                    <div class="w-art-bg">EI</div>
-                    <div class="w-art-tags">
-                        <div class="w-tag">Weddings & Engagements</div>
-                        <div class="w-tag">Birthday Celebrations</div>
-                        <div class="w-tag">Store Openings & Launches</div>
-                        <div class="w-tag">All Special Events</div>
+            <div class="p-head">
+                <div class="lbl" style="justify-content:center">Our Samples</div>
+                <!-- ✅ SEO: H2 for section heading -->
+                <h2 class="p-title">Explore our invitation designs</h2>
+                <p class="p-sub">A glimpse into our beautifully crafted digital event invitations.</p>
+            </div>
+
+            <div class="sample-grid">
+                <a href="wedding-sample-1/index.html" target="_blank" class="sample-card"
+                    aria-label="View Wedding Invitation sample">
+                    <img src="images/sample1.jpg.png" alt="Wedding invitation design sample — elegant digital invite"
+                        width="400" height="220" loading="lazy">
+                    <div class="sample-info">
+                        <h3>Wedding Invitation</h3>
                     </div>
+                </a>
+
+                <a href="birthday-sample-1/index.html" target="_blank" class="sample-card"
+                    aria-label="View Birthday Invitation sample">
+                    <img src="images/sample2.jpg.png" alt="Birthday invitation design sample — colourful digital invite"
+                        width="400" height="220" loading="lazy">
+                    <div class="sample-info">
+                        <h3>Birthday Invitation</h3>
+                    </div>
+                </a>
+
+                <a href="housewarming-sample-1/index.html" target="_blank" class="sample-card"
+                    aria-label="View Housewarming Invitation sample">
+                    <img src="images/sample3.jpg.png" alt="Housewarming invitation design sample — warm digital card"
+                        width="400" height="220" loading="lazy">
+                    <div class="sample-info">
+                        <h3>Housewarming Invitation</h3>
+                    </div>
+                </a>
+
+                <a href="shop-launch-sample-1/index.html" target="_blank" class="sample-card"
+                    aria-label="View Shop Launch Invitation sample">
+                    <img src="images/sample4.jpg.png"
+                        alt="Shop launch invitation design sample — professional digital announcement" width="400"
+                        height="220" loading="lazy">
+                    <div class="sample-info">
+                        <h3>Shop Launch Invitation</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ SEO CONTENT SECTION — keyword-rich, structured content for Google -->
+    <section class="seo-content" id="what" aria-label="Our Services">
+        <div class="sw">
+            <div class="seo-head">
+                <div class="lbl" style="justify-content:center">What We Offer</div>
+                <!-- ✅ SEO: H2 for section -->
+                <h2 class="seo-main-title">Digital Invitations for Every Occasion</h2>
+                <p class="seo-intro">Event Invite creates beautifully crafted online invitations that make your
+                    celebration unforgettable. From intimate gatherings to grand events, we design custom digital
+                    invites that are elegant, easy to share, and perfectly tailored to your occasion.</p>
+            </div>
+
+            <div class="seo-grid">
+
+                <!-- ✅ SEO: H3 for each subsection -->
+                <div class="seo-block">
+                    <span class="seo-block-icon" aria-hidden="true">💍</span>
+                    <h3>Wedding Invitations</h3>
+                    <p>Our wedding invitations are designed to reflect the romance and grandeur of your special day.
+                        Each digital wedding invite is crafted with refined typography, elegant layouts, and personal
+                        details that set the tone for your ceremony. Share your love story beautifully with guests
+                        through a stunning online wedding invitation.</p>
                 </div>
-                <div>
-                    <div class="lbl">What We Create</div>
-                    <h2 class="w-title">Minimal designs with lasting impact.</h2>
-                    <p class="w-body">We create modern digital invites and websites for weddings, birthdays, store
-                        launches, and special events—designed to feel premium and personal.</p>
-                    <div class="w-cap">A clean and elegant digital identity tailored for your occasion.</div>
+
+                <div class="seo-block">
+                    <span class="seo-block-icon" aria-hidden="true">🎂</span>
+                    <h3>Birthday Invitations</h3>
+                    <p>Celebrate every milestone with a digital birthday invitation that is as vibrant and joyful as the
+                        occasion itself. Whether it's a first birthday or a landmark celebration, our birthday invites
+                        are colourful, personalised, and instantly shareable online. Make your birthday party
+                        unforgettable
+                        from the very first invite.</p>
+                </div>
+
+                <div class="seo-block">
+                    <span class="seo-block-icon" aria-hidden="true">🎉</span>
+                    <h3>Party Invitations</h3>
+                    <p>Planning a party? Our digital party invitations are bold, energetic, and designed to generate
+                        excitement before the event even begins. Whether it's a house party, anniversary, or festive
+                        gathering, we create online party invites that guests will actually look forward to receiving
+                        and sharing.</p>
+                </div>
+
+                <div class="seo-block">
+                    <span class="seo-block-icon" aria-hidden="true">🏠</span>
+                    <h3>Housewarming Invitations</h3>
+                    <p>Moving into a new home is a joyful milestone that deserves a warm and welcoming announcement.
+                        Our housewarming invitations are designed with a cosy, inviting aesthetic that reflects the
+                        warmth of your new space. Share your new address and invite loved ones with a beautifully
+                        designed digital housewarming card.</p>
+                </div>
+
+            </div>
+
+            <!-- Digital Sharing Sub-section -->
+            <div class="seo-sharing">
+                <div class="seo-sharing-inner">
+                    <div class="seo-sharing-text">
+                        <!-- ✅ SEO: H3 subsection -->
+                        <h3>Digital Invite Sharing — Fast, Simple & Beautiful</h3>
+                        <p>Gone are the days of printed cards and postal delays. Our digital invitations are
+                            designed for instant sharing across every platform — WhatsApp, Instagram, email, and
+                            more. Every invite is optimised to look stunning on both mobile and desktop screens,
+                            ensuring
+                            your guests receive a flawless experience no matter where they are.</p>
+                    </div>
+                    <ul class="seo-sharing-list">
+                        <li>Shareable via WhatsApp, email & social media in seconds</li>
+                        <li>Mobile-first design — looks perfect on every device</li>
+                        <li>No printing costs — eco-friendly and budget-friendly</li>
+                        <li>Instant delivery — no waiting for postal invites</li>
+                        <li>Custom links for every event, easy to forward and bookmark</li>
+                        <li>Accessible for all guests, anywhere in the world</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- APPROACH -->
-    <section class="approach" id="approach">
+    <section class="approach" id="approach" aria-label="Our Approach">
         <div class="ap-inner">
             <div class="ap-head">
                 <div class="lbl ap-lbl" style="justify-content:center">Our Approach</div>
@@ -1049,56 +1390,61 @@
             <div class="ap-g">
                 <div class="apc">
                     <div class="apc-tag">Design</div>
-                    <div class="apc-h">Clean & Modern</div>
+                    <h3 class="apc-h">Clean &amp; Modern</h3>
                     <div class="apc-s">Clean and modern visuals</div>
-                    <p class="apc-d">Minimal layouts with a refined and premium feel.</p>
+                    <p class="apc-d">Minimal layouts with a refined and premium feel — every element placed with
+                        intention.</p>
                 </div>
                 <div class="apc" style="transition-delay:0.15s">
                     <div class="apc-tag">Structure</div>
-                    <div class="apc-h">Easy Navigation</div>
+                    <h3 class="apc-h">Easy Navigation</h3>
                     <div class="apc-s">Easy to navigate</div>
-                    <p class="apc-d">Information presented clearly for every guest.</p>
+                    <p class="apc-d">Information presented clearly for every guest — no confusion, just clarity.</p>
                 </div>
                 <div class="apc" style="transition-delay:0.3s">
                     <div class="apc-tag">Identity</div>
-                    <div class="apc-h">Uniquely Yours</div>
+                    <h3 class="apc-h">Uniquely Yours</h3>
                     <div class="apc-s">Unique for every event</div>
-                    <p class="apc-d">Each celebration gets its own distinct digital style.</p>
+                    <p class="apc-d">Each celebration gets its own distinct digital style — tailored to your theme and
+                        personality.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROCESS -->
-    <section class="process" id="process">
+    <section class="process" id="process" aria-label="Our Process">
         <div class="sw">
             <div class="p-head">
                 <div class="lbl" style="justify-content:center">Process</div>
                 <h2 class="p-title">From idea to experience, seamlessly built.</h2>
-                <p class="p-sub">A simple process that keeps everything smooth and elegant.</p>
+                <p class="p-sub">A simple, transparent process that keeps everything smooth and elegant.</p>
             </div>
             <div class="p-g">
                 <div class="pg">
-                    <div class="pg-n">1</div>
-                    <div class="pg-h">Understanding</div>
-                    <p class="pg-d">We learn about your occasion, theme, and requirements.</p>
+                    <div class="pg-n" aria-hidden="true">1</div>
+                    <h3 class="pg-h">Understanding</h3>
+                    <p class="pg-d">We learn about your occasion, theme, guest list, and requirements to ensure every
+                        detail is captured perfectly.</p>
                 </div>
                 <div class="pg" style="transition-delay:0.2s">
-                    <div class="pg-n">2</div>
-                    <div class="pg-h">Designing</div>
-                    <p class="pg-d">We create a modern and minimal experience tailored to you.</p>
+                    <div class="pg-n" aria-hidden="true">2</div>
+                    <h3 class="pg-h">Designing</h3>
+                    <p class="pg-d">We create a modern, minimal, and personalised digital invitation experience that
+                        truly reflects your celebration.</p>
                 </div>
                 <div class="pg" style="transition-delay:0.4s">
-                    <div class="pg-n">3</div>
-                    <div class="pg-h">Sharing</div>
-                    <p class="pg-d">Your invite or website is ready to share with everyone.</p>
+                    <div class="pg-n" aria-hidden="true">3</div>
+                    <h3 class="pg-h">Sharing</h3>
+                    <p class="pg-d">Your invite or event website is ready to share with everyone — via WhatsApp, email,
+                        or any platform you choose.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CLOSING -->
-    <section class="closing">
+    <section class="closing" aria-label="Brand Statement">
         <p class="cl-q">"A quiet confidence that speaks instantly. A feeling we aim to bring to every celebration we
             create."</p>
         <div class="cl-tag">Elegant · Memorable · Effortless</div>
@@ -1107,13 +1453,13 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" aria-label="Contact">
         <div class="ct-wrap">
             <h2 class="ct-title">Get In Touch</h2>
             <div class="ct-bar"></div>
             <div class="ct-grid">
-                <a href="mailto:eventinvite.2175@gmail.com" class="ct-btn">
-                    <span class="ico">
+                <a href="mailto:eventinvite.2175@gmail.com" class="ct-btn" aria-label="Send an email to Event Invite">
+                    <span class="ico" aria-hidden="true">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.8">
                             <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -1122,8 +1468,9 @@
                     </span>
                     eventinvite.2175@gmail.com
                 </a>
-                <a href="https://wa.me/9072297408" target="_blank" class="ct-btn">
-                    <span class="ico">
+                <a href="https://wa.me/9072297408" target="_blank" rel="noopener noreferrer" class="ct-btn"
+                    aria-label="Contact Event Invite on WhatsApp">
+                    <span class="ico" aria-hidden="true">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
@@ -1135,9 +1482,11 @@
         </div>
     </section>
 
+    <!-- ✅ SEO: Semantic <footer> -->
     <footer>
         <div class="f-b">Event Invite</div>
-        <div class="f-c">© 2025 Event Invite. All rights reserved.</div>
+        <p class="f-c">© 2025 Event Invite. All rights reserved. | Digital Event Invitations — Wedding, Birthday,
+            Housewarming &amp; More</p>
     </footer>
 
     <script>

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventInvite — Thank You!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #0a0a14;
+            color: #f0ecff;
+            overflow-x: hidden;
+        }
+
+        /* ── PARTICLES ── */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            border-radius: 50%;
+            animation: pFloat linear infinite;
+        }
+
+        @keyframes pFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(1.2);
+            }
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 30% 50%, #1a0a30 0%, #0a0a18 60%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(120, 60, 200, 0.12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 100px;
+            padding: 8px 20px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            color: rgba(200, 180, 255, 0.8);
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            animation: fadeDown 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            animation: bounce 2s ease-in-out infinite, fadeUp 0.8s ease 0.3s both;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 80px;
+            background: linear-gradient(135deg, #e0c8ff, #c090ff, #a060ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            padding: 10px 20px;
+            margin-bottom: 4px;
+            animation: fadeUp 0.8s ease 0.4s both;
+        }
+
+        .hero-sub {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: rgba(200, 180, 255, 0.65);
+            margin-bottom: 32px;
+            letter-spacing: 0.06em;
+            animation: fadeUp 0.8s ease 0.5s both;
+        }
+
+        .hero-thank {
+            font-size: 16px;
+            font-weight: 300;
+            color: rgba(240, 236, 255, 0.7);
+            line-height: 1.8;
+            max-width: 480px;
+            animation: fadeUp 0.8s ease 0.6s both;
+        }
+
+        .hero-thank strong {
+            color: #d4b8ff;
+            font-weight: 500;
+        }
+
+        .hero-url {
+            margin-top: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #6030c0, #9040e0);
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            padding: 13px 28px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            animation: fadeUp 0.8s ease 0.8s both;
+            box-shadow: 0 4px 24px rgba(96, 48, 192, 0.4);
+        }
+
+        .hero-url:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(96, 48, 192, 0.5);
+        }
+
+        .hero-scroll {
+            margin-top: 40px;
+            font-size: 9px;
+            font-weight: 400;
+            letter-spacing: 0.28em;
+            color: rgba(160, 130, 220, 0.4);
+            text-transform: uppercase;
+            cursor: pointer;
+            animation: fadeUp 0.8s ease 1s both, breathe 2.5s ease-in-out 2s infinite;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* ── INFO CARDS ── */
+        .cards-section {
+            background: linear-gradient(160deg, #0e0818, #0a0a18);
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .cards-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(160, 96, 255, 0.3), transparent);
+        }
+
+        .section-eyebrow {
+            text-align: center;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.36em;
+            color: rgba(160, 130, 220, 0.55);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #f0ecff;
+            margin-bottom: 48px;
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: #c090ff;
+            font-style: italic;
+        }
+
+        .cards-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 28px 24px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+            opacity: 0.6;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.14);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .card-label {
+            font-size: 8.5px;
+            font-weight: 500;
+            letter-spacing: 0.26em;
+            color: var(--card-color);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #f0ecff;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(240, 236, 255, 0.6);
+            line-height: 1.8;
+        }
+
+        .card-text a {
+            color: var(--card-color);
+            text-decoration: none;
+        }
+
+        .card-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── FEEDBACK SECTION ── */
+        .feedback-section {
+            background: radial-gradient(ellipse at 50% 0%, #1e0a38 0%, #0a0a18 60%);
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .feedback-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(160, 96, 255, 0.3), transparent);
+        }
+
+        .feedback-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .feedback-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .feedback-eyebrow {
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 0.36em;
+            color: rgba(160, 130, 220, 0.55);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .feedback-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 56px;
+            background: linear-gradient(135deg, #e0c8ff, #a060ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .feedback-sub {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(240, 236, 255, 0.55);
+            line-height: 1.7;
+        }
+
+        /* STAR RATING */
+        .rating-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .rating-label {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(240, 236, 255, 0.6);
+            margin-bottom: 16px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .star {
+            font-size: 36px;
+            cursor: pointer;
+            transition: transform 0.15s;
+            filter: grayscale(1) opacity(0.3);
+        }
+
+        .star.active {
+            filter: none;
+            transform: scale(1.1);
+        }
+
+        .star:hover {
+            transform: scale(1.2);
+        }
+
+        .rating-text {
+            font-size: 12px;
+            color: rgba(160, 130, 220, 0.55);
+            min-height: 18px;
+            transition: all 0.3s;
+        }
+
+        /* FORM FIELDS */
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            color: rgba(200, 180, 255, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: #f0ecff;
+            transition: all 0.25s;
+            outline: none;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(200, 180, 255, 0.25);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: rgba(160, 96, 255, 0.5);
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 0 3px rgba(160, 96, 255, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* EMOJI REACTION */
+        .reaction-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+        }
+
+        .reaction-label {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(240, 236, 255, 0.6);
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .reactions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .reaction-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 100px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(240, 236, 255, 0.6);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .reaction-btn:hover,
+        .reaction-btn.selected {
+            background: rgba(160, 96, 255, 0.15);
+            border-color: rgba(160, 96, 255, 0.4);
+            color: #f0ecff;
+            transform: scale(1.05);
+        }
+
+        /* SUBMIT */
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #6030c0, #9040e0);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 16px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 24px rgba(96, 48, 192, 0.4);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(96, 48, 192, 0.5);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* SUCCESS STATE */
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .success-msg.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+
+        .success-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #f0ecff;
+            margin-bottom: 10px;
+        }
+
+        .success-sub {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(240, 236, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* ── PROMISE BANNER ── */
+        .promise-banner {
+            background: linear-gradient(135deg, #4020a0, #7030c0);
+            padding: 52px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promise-banner::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+        }
+
+        .pb-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        .pb-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .pb-text {
+            font-size: 15px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            max-width: 520px;
+            margin: 0 auto 24px;
+        }
+
+        .pb-url {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            padding: 11px 24px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.25s;
+            text-transform: uppercase;
+        }
+
+        .pb-url:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #060610;
+            padding: 28px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+            background: linear-gradient(135deg, #c090ff, #a060ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
+        }
+
+        .footer-text {
+            font-size: 11px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.08em;
+        }
+
+        .footer-text a {
+            color: rgba(160, 130, 220, 0.5);
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            color: #c090ff;
+        }
+
+        @media(max-width:600px) {
+            .hero-title {
+                font-size: 56px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feedback-title {
+                font-size: 44px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+    <div id="particleContainer"></div>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-badge">🌐 eventinvite.info</div>
+        <div class="hero-icon">🎉</div>
+        <div class="hero-title"> EventInvite </div>
+        <div class="hero-sub">Your Online Invitation Website Builder</div>
+        <div class="hero-thank">
+            Thank you for choosing <strong>EventInvite</strong> — we're thrilled to be part of your special moments and
+            can't wait to deliver something truly beautiful for you.
+        </div>
+        <a class="hero-url" href="https://eventinvite.info" target="_blank">
+            🌐 Visit eventinvite.info
+        </a>
+        <div class="hero-scroll" onclick="document.getElementById('infoCards').scrollIntoView({behavior:'smooth'})">
+            Scroll to learn more ↓
+        </div>
+    </section>
+
+    <!-- ── INFO CARDS ── -->
+    <section class="cards-section" id="infoCards">
+        <div class="section-eyebrow">What to expect</div>
+        <div class="section-title">Everything You <span>Need to Know</span></div>
+        <div class="cards-grid">
+
+            <div class="card" style="--card-color:#a060ff;">
+                <div class="card-icon">📦</div>
+                <div class="card-label">Delivery</div>
+                <div class="card-title">2-Day Delivery</div>
+                <div class="card-text">Your live invitation website will be delivered within <strong
+                        style="color:#c090ff;">2 days</strong> of placing your order. Sit back and relax!</div>
+            </div>
+
+            <div class="card" style="--card-color:#60c0ff;">
+                <div class="card-icon">📞</div>
+                <div class="card-label">Support</div>
+                <div class="card-title">Always Here</div>
+                <div class="card-text">Need help? Visit <a href="https://eventinvite.info"
+                        target="_blank">eventinvite.info</a> or contact us anytime. We're always ready to assist you.
+                </div>
+            </div>
+
+            <div class="card" style="--card-color:#ff80c0;">
+                <div class="card-icon">💬</div>
+                <div class="card-label">Our Promise</div>
+                <div class="card-title">With You Always</div>
+                <div class="card-text">Our service will always be with you. <strong style="color:#ffa0d0;">Your support
+                        and happiness</strong> are our growth and our purpose.</div>
+            </div>
+
+            <div class="card" style="--card-color:#80e0a0;">
+                <div class="card-icon">🙏</div>
+                <div class="card-label">Thank You</div>
+                <div class="card-title">Trusted by You</div>
+                <div class="card-text">Thank you for trusting us to be part of your <strong
+                        style="color:#a0f0b8;">special moments</strong>. That trust means everything to us.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── FEEDBACK SECTION ── -->
+    <section class="feedback-section" id="feedbackSection">
+        <div class="feedback-wrap">
+            <div class="feedback-header">
+                <div class="feedback-eyebrow">We'd love to hear from you</div>
+                <div class="feedback-title">Your Feedback</div>
+                <div class="feedback-sub">Help us improve! Share your experience with EventInvite — it takes less than a
+                    minute.</div>
+            </div>
+
+            <div id="feedbackForm">
+                <!-- STAR RATING -->
+                <div class="rating-box">
+                    <div class="rating-label">How would you rate your experience?</div>
+                    <div class="stars" id="starsRow">
+                        <span class="star" data-val="1">⭐</span>
+                        <span class="star" data-val="2">⭐</span>
+                        <span class="star" data-val="3">⭐</span>
+                        <span class="star" data-val="4">⭐</span>
+                        <span class="star" data-val="5">⭐</span>
+                    </div>
+                    <div class="rating-text" id="ratingText">Tap a star to rate</div>
+                </div>
+
+                <!-- EMOJI REACTION -->
+                <div class="reaction-box">
+                    <div class="reaction-label">How do you feel about EventInvite?</div>
+                    <div class="reactions" id="reactionsRow">
+                        <button class="reaction-btn" data-label="Amazing!">😍 Amazing!</button>
+                        <button class="reaction-btn" data-label="Very Good">😊 Very Good</button>
+                        <button class="reaction-btn" data-label="It's Okay">😐 It's Okay</button>
+                        <button class="reaction-btn" data-label="Needs Work">😕 Needs Work</button>
+                    </div>
+                </div>
+
+                <!-- FORM FIELDS -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Your Name</label>
+                        <input class="form-input" type="text" id="userName" placeholder="e.g. Riya Thomas">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone / WhatsApp</label>
+                        <input class="form-input" type="text" id="userPhone" placeholder="e.g. 9876543210">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Your Feedback</label>
+                    <textarea class="form-textarea" id="userFeedback"
+                        placeholder="Tell us about your experience, what you loved, or how we can improve..."></textarea>
+                </div>
+
+                <button class="submit-btn" onclick="submitFeedback()">
+                    ✨ Submit My Feedback
+                </button>
+            </div>
+
+            <!-- SUCCESS -->
+            <div class="success-msg" id="successMsg">
+                <div class="success-icon">🎊</div>
+                <div class="success-title">Thank You So Much!</div>
+                <div class="success-sub">
+                    Your feedback means the world to us. We're constantly improving because of amazing customers like
+                    you.<br><br>
+                    <strong style="color:#c090ff;">Team EventInvite 🙏</strong>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── PROMISE BANNER ── -->
+    <section class="promise-banner">
+        <div class="pb-icon">💜</div>
+        <div class="pb-title">Our Promise to You</div>
+        <div class="pb-text">
+            Our service will always be with you. Your support and happiness are our growth. Thank you for trusting us to
+            be part of your most special moments.
+        </div>
+        <a class="pb-url" href="https://eventinvite.info" target="_blank">
+            🌐 www.eventinvite.info
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">EventInvite</div>
+        <div class="footer-text">
+            Your Online Invitation Website Builder &nbsp;·&nbsp;
+            <a href="https://eventinvite.info" target="_blank">eventinvite.info</a>
+        </div>
+    </footer>
+
+    <script>
+        /* ── PARTICLES ── */
+        const colors = ['rgba(160,96,255,', 'rgba(96,192,255,', 'rgba(255,128,200,', 'rgba(128,224,160,'];
+        function makeParticle() {
+            const p = document.createElement('div'); p.className = 'particle';
+            const size = 2 + Math.random() * 4;
+            const c = colors[Math.floor(Math.random() * colors.length)];
+            p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}vw;bottom:-${size}px;background:${c}${0.4 + Math.random() * 0.4});animation-duration:${7 + Math.random() * 9}s;animation-delay:${Math.random() * 5}s;`;
+            document.getElementById('particleContainer').appendChild(p);
+            setTimeout(() => p.remove(), (16 + Math.random() * 9) * 1000);
+        }
+        setInterval(makeParticle, 500);
+
+        /* ── STAR RATING ── */
+        const ratingLabels = ['', 'Needs improvement 😕', 'It was okay 😐', 'Pretty good 😊', 'Really loved it 😍', 'Absolutely amazing! 🤩'];
+        let selectedRating = 0;
+        document.querySelectorAll('.star').forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const v = +star.dataset.val;
+                document.querySelectorAll('.star').forEach((s, i) => s.classList.toggle('active', i < v));
+            });
+            star.addEventListener('mouseout', () => {
+                document.querySelectorAll('.star').forEach((s, i) => s.classList.toggle('active', i < selectedRating));
+            });
+            star.addEventListener('click', () => {
+                selectedRating = +star.dataset.val;
+                document.querySelectorAll('.star').forEach((s, i) => s.classList.toggle('active', i < selectedRating));
+                document.getElementById('ratingText').textContent = ratingLabels[selectedRating];
+            });
+        });
+
+        /* ── EMOJI REACTIONS ── */
+        document.querySelectorAll('.reaction-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.reaction-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+            });
+        });
+
+        /* ── SUBMIT ── */
+        function submitFeedback() {
+            const name = document.getElementById('userName').value.trim();
+            const feedback = document.getElementById('userFeedback').value.trim();
+            if (!selectedRating) {
+                alert('Please give us a star rating first! ⭐'); return;
+            }
+            if (!feedback) {
+                alert('Please share your feedback with us! 💬'); return;
+            }
+            document.getElementById('feedbackForm').style.opacity = '0';
+            document.getElementById('feedbackForm').style.transition = 'opacity 0.4s';
+            setTimeout(() => {
+                document.getElementById('feedbackForm').style.display = 'none';
+                document.getElementById('successMsg').classList.add('show');
+            }, 400);
+            // scroll to success
+            setTimeout(() => document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'center' }), 500);
+        }
+
+        /* ── CARD SCROLL ANIMATION ── */
+        const observer = new IntersectionObserver(entries => entries.forEach(e => {
+            if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+        }), { threshold: 0.15 });
+        document.querySelectorAll('.card').forEach((card, i) => {
+            card.style.opacity = '0'; card.style.transform = 'translateY(24px)';
+            card.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
