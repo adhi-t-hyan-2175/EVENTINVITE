@@ -32,15 +32,15 @@
             inviteTagline: "You are cordially invited to the wedding reception of",
             inviteBlurb: "With love in our hearts, we invite you to celebrate our union.",
             storyText: "Our story began back in the halls of our college, where a simple meeting sparked a beautiful connection. From those early days of navigating campus life together, we discovered a love that has only grown stronger with time. Through all the shared laughter, milestones, and unforgettable memories over the years, we have remained each other's constant support. Now, as we step into this beautiful next chapter, we are absolutely thrilled to celebrate the beginning of our forever!",
-            storyPhoto: "",
+            storyPhoto: "ChatGPT Image Apr 30, 2026, 03_06_56 PM.png",
             storyCaption: "BRIDE & GROOM",
             gallery: [
-                { img: "", label: "A love story begins", color: "linear-gradient(135deg,#6b1f3a,#2c0d1a)" },
-                { img: "", label: "Together always", color: "linear-gradient(135deg,#8b2252,#3d0f28)" },
-                { img: "", label: "Our favourite memory", color: "linear-gradient(135deg,#7a1a40,#1e0810)" },
-                { img: "", label: "Endless laughter", color: "linear-gradient(135deg,#5c1030,#2a0a18)" },
-                { img: "", label: "Forever moments", color: "linear-gradient(135deg,#9c2b5e,#4a1030)" },
-                { img: "", label: "The beginning of us", color: "linear-gradient(135deg,#6b1f3a,#3a0f20)" },
+                { img: "6mg.png", label: "A love story begins", color: "linear-gradient(135deg,#6b1f3a,#2c0d1a)" },
+                { img: "2mg.png", label: "Together always", color: "linear-gradient(135deg,#8b2252,#3d0f28)" },
+                { img: "3mg.png", label: "Our favourite memory", color: "linear-gradient(135deg,#7a1a40,#1e0810)" },
+                { img: "4mg.png", label: "Endless laughter", color: "linear-gradient(135deg,#5c1030,#2a0a18)" },
+                { img: "1mg.png", label: "Forever moments", color: "linear-gradient(135deg,#9c2b5e,#4a1030)" },
+                { img: "5mg.png", label: "The beginning of us", color: "linear-gradient(135deg,#6b1f3a,#3a0f20)" },
             ],
             program: [
                 { time: "4:30 PM", event: "Guest Arrival", desc: "Welcome drinks & mingling" },
@@ -1475,6 +1475,129 @@
 
             .ic-date-num {
                 font-size: 26px;
+            }
+        }
+
+        /* ───────── MOBILE FIX (ADD ONLY) ───────── */
+        @media (max-width: 600px) {
+
+            /* NAV */
+            nav {
+                padding: 10px 14px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            /* HERO */
+            .hero-names {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+            .hero-sub {
+                max-width: 260px;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 1.7;
+                letter-spacing: 0.15em;
+            }
+
+            /* ENVELOPE */
+            .envelope-shell {
+                width: 100%;
+                height: 220px;
+            }
+
+            .inv-card {
+                padding: 16px 12px;
+            }
+
+            /* COUNTDOWN */
+            .cd-row {
+                gap: 10px;
+            }
+
+            .cd-box {
+                width: 70px;
+                padding: 12px 4px;
+            }
+
+            .cd-num {
+                font-size: 28px;
+            }
+
+            /* STORY */
+            #story {
+                padding: 40px 18px;
+                gap: 30px;
+            }
+
+            .story-title {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .story-body {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .rose-frame {
+                width: 100%;
+            }
+
+            /* GALLERY */
+            .c-outer {
+                height: 300px;
+            }
+
+            /* VENUE */
+            #venue {
+                padding: 40px 18px;
+            }
+
+            .v-title {
+                font-size: 26px;
+            }
+
+            .v-name {
+                font-size: 16px;
+            }
+
+            /* MAP */
+            .map-iframe {
+                height: 220px;
+            }
+
+            /* PROGRAM */
+            #program {
+                padding: 40px 18px;
+            }
+
+            .prog-title {
+                font-size: 28px;
+            }
+
+            .prog-timeline::before {
+                left: 60px;
+            }
+
+            .prog-time {
+                min-width: 60px;
+                font-size: 8px;
+            }
+
+            /* FOOTER */
+            footer {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
             }
         }
     </style>
